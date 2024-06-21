@@ -11,7 +11,19 @@
     <!-- Main content -->
     <section class="content">
         <div class="container-fluid">
+            <!-- Heroes -->
 
+            <!-- About Us -->
+
+            <!-- Our Services -->
+
+            <!-- Our Works-->
+
+            <!-- Client-->
+
+            <!-- Meet the Team-->
+
+            <!-- Galeri Project-->
         </div>
     </section>
 @endsection
