@@ -1,7 +1,7 @@
 @extends('frontend.layout.app')
 
 @section('title')
-    Contact Us
+    Project
 @endsection
 
 @push('css')
@@ -13,7 +13,7 @@
         <div class="container h-100 p-5">
             <div class="row align-items-center h-100">
                 <div class="col-12 text-center text-white">
-                    <h1><strong>Contact Us</strong></h1>
+                    <h1><strong>Our Projects</strong></h1>
                 </div>
             </div>
         </div>

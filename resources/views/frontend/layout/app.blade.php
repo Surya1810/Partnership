@@ -69,12 +69,24 @@
                             </li>
                         @endif
                         <li class="nav-item">
-                            <a class="nav-link {{ request()->is('contact*') ? 'active' : '' }}"
-                                href="{{ route('contact') }}">Contact</a>
+                            <a class="nav-link {{ request()->is('about*') ? 'active' : '' }}"
+                                href="{{ route('about') }}">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link {{ request()->is('client*') ? 'active' : '' }}"
                                 href="{{ route('client') }}">Client</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->is('product*') ? 'active' : '' }}"
+                                href="{{ route('product') }}">Product</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->is('project*') ? 'active' : '' }}"
+                                href="{{ route('project') }}">Project</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->is('contact*') ? 'active' : '' }}"
+                                href="{{ route('contact') }}">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -96,7 +108,7 @@
                     pada
                     menyediakan solusi
                     kreatif dan layanan pemasaran terpadu untuk berbagai klien dari berbagai industri.</p>
-                <img src="{{ asset('assets/img/logo/main_light.png') }}" alt="Logo">
+                <img src="{{ asset('assets/img/logo/main_light.png') }}" alt="Logo" height="32px">
                 <div class="mt-5">
                     <h5 class="mb-2">Follow Us</h5>
                     <ul class="list-unstyled d-flex">
@@ -125,7 +137,7 @@
         <footer>
             <div class="container" style="min-height: 70svh; color: #FFFFFF;padding-bottom: 40px">
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 pt-5 mt-5 pb-2 mb-2">
-                    <div class="col-12 col-md-6 mb-3">
+                    <div class="col-12 col-md-5 mb-3">
                         <a href="/"
                             class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
                             <img src="{{ asset('assets/img/logo/main_light.png') }}" alt="logo_main" height="32px">
@@ -134,42 +146,48 @@
                         <p></p>
                         <ul class="nav flex-column">
                             <li class="nav-item mb-2">
-                                <p><strong>Partner Workshop<br></strong>Jl. Terusan Jakarta No.43 Bandung, Indonesia,
-                                    40281</p>
+                                <p><strong>Partner Workshop<br></strong>Jl. Terusan Jakarta No.42, Babakan Surabaya,
+                                    Kec. Kiaracondong, Kota Bandung, Jawa Barat 40281</p>
                             </li>
                         </ul>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d495.10196433844266!2d107.64939006629403!3d-6.912625189480249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7ecd3aeddb7%3A0xb1b80611740d391e!2sPartner%20Workshop!5e0!3m2!1sen!2sid!4v1719229867483!5m2!1sen!2sid"
+                            width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" title="maps"></iframe>
                         <p class="text-secondary"><strong>Partner Care</strong></p>
                         <div class="row mb-3">
-                            <div class="col-6 col-md-4">
+                            <div class="col-6 col-md-6">
                                 <ul class="nav flex-column">
                                     <li class="nav-item mb-2"><a href="https://wa.me/6282126000126" target="_blank"
                                             class="nav-link p-0 text-white"><i
                                                 class="fa-brands fa-whatsapp fa-xl"></i> 0821
-                                            2600 0126</a>
+                                            2600 0126 ( Admin 1 )</a>
                                     </li>
-                                    <li class="nav-item mb-2"><a href="https://wa.me/6282117108850" target="_blank"
-                                            class="nav-link p-0 text-white"><i
+                                    <li class="nav-item mb-2 mt-2"><a href="https://wa.me/6282117108850"
+                                            target="_blank" class="nav-link p-0 text-white"><i
                                                 class="fa-brands fa-whatsapp fa-xl"></i> 0821
-                                            1710 8850</a>
+                                            1710 8850 ( Admin 2 )</a>
                                     </li>
                                 </ul>
                             </div>
-                            <div class="col-6 col-md-4">
+                            <div class="col-6 col-md-6">
                                 <ul class="nav flex-column float-start">
                                     <li class="nav-item mb-2"><a href="https://wa.me/6289626309580" target="_blank"
                                             class="nav-link p-0 text-white"><i
                                                 class="fa-brands fa-whatsapp fa-xl"></i> 0896
-                                            2630 9580</a>
+                                            2630 9580 ( Admin 3 )</a>
                                     </li>
-                                    <li class="nav-item mb-2"><a href="https://wa.me/6289512776878" target="_blank"
-                                            class="nav-link p-0 text-white"><i
+                                    <li class="nav-item mb-2 mt-2"><a href="https://wa.me/6289512776878"
+                                            target="_blank" class="nav-link p-0 text-white"><i
                                                 class="fa-brands fa-whatsapp fa-xl"></i> 0895
-                                            1277 6878</a>
+                                            1277 6878 ( Admin 4 )</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
+
+                    <div class="col-md-1"></div>
 
                     <div class="col-4 col-md-2 mb-3">
                         <h5 style="color: #0055FF"><strong>Company</strong></h5>

@@ -8,19 +8,57 @@
 @endpush
 
 @section('content')
-    <!-- Heroes -->
+    <!-- Judul -->
     <section class="container_border">
-        <div class="container">
+        <div class="container h-100 p-5">
+            <div class="row align-items-center h-100">
+                <div class="col-12 text-center text-white">
+                    <h1><strong>Our Clients</strong></h1>
+                </div>
+            </div>
         </div>
     </section>
-    <section class="u-line-hr-top">
 
+    <!-- Judul -->
+    <section class="s-line-hr-top" style="min-height: 100svh;background-color: #fff">
+        <div class="container">
+            <div class="row g-3 d-flex justify-content-center">
+                <div class="col-3 col-md-2">
+                    <img src="{{ asset('assets/img/client/01 POLRI.png') }}" alt="Client" style="width: 100%;height: 100%">
+                </div>
+                <div class="col-3 col-md-2">
+                    <img src="{{ asset('assets/img/client/02 BADAN PEMELIHARAAN KEAMANAN.png') }}" alt="Client"
+                        style="width: 100%;height: 100%">
+                </div>
+                <div class="col-3 col-md-2">
+                    <img src="{{ asset('assets/Client/03 Samsung.png') }}" alt="Client" style="width: 100%;height: 100%">
+                </div>
+                <div class="col-3 col-md-2">
+                    <img src="{{ asset('assets/Client/04 Podomoro.png') }}" alt="Client" style="width: 100%;height: 100%">
+                </div>
+                <div class="col-3 col-md-2">
+                    <img src="{{ asset('assets/Client/05 Mitshubishi.png') }}" alt="Client"
+                        style="width: 100%;height: 100%">
+                </div>
+                <div class="col-3 col-md-2">
+                    <img src="{{ asset('assets/Client/06 MS Glow.png') }}" alt="Client" style="width: 100%;height: 100%">
+                </div>
+                <div class="col-3 col-md-1">
+                    <img src="{{ asset('assets/Client/07 Summarecon.png') }}" alt="Client"
+                        style="width: 100%;height: 100%">
+                </div>
+                <div class="col-3 col-md-1">
+                    <img src="{{ asset('assets/Client/08 Dago.png') }}" alt="Client" style="width: 100%;height: 100%">
+                </div>
+                <div class="col-3 col-md-1">
+                    <img src="{{ asset('assets/Client/09 BCA.png') }}" alt="Client" style="width: 100%;height: 100%">
+                </div>
+                <div class="col-3 col-md-1">
+                    <img src="{{ asset('assets/Client/10 Jasa.png') }}" alt="Client" style="width: 100%;height: 100%">
+                </div>
+            </div>
+        </div>
     </section>
-    <!-- Maps-->
-    <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d454.00994774846845!2d107.64986823566909!3d-6.9132130066250035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7e922e052cb%3A0x5b0e1194e44e5e65!2sJl.%20Terusan%20Jakarta%2C%20Babakan%20Surabaya%2C%20Kec.%20Kiaracondong%2C%20Kota%20Bandung%2C%20Jawa%20Barat%2040281!5e0!3m2!1sid!2sid!4v1719210338852!5m2!1sid!2sid"
-        width="100%" height="160" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade" title="Maps"></iframe>
 @endsection
 
 @push('scripts')

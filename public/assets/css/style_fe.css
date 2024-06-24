@@ -201,8 +201,13 @@ body::-webkit-scrollbar {
     background-size: cover;
 }
 .container_border {
-    height: 90svh;
+    height: 40svh;
     width: 100svw;
+    background-image: url(/assets/img/background/Pattern_Dark.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 /* S-LINE */
@@ -258,20 +263,8 @@ body::-webkit-scrollbar {
     border-top-right-radius: 48px;
     border-top-left-radius: 48px;
     margin-top: -48px;
-}
-
-.u-line-hr-top::before {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 48px;
-    top: -48px;
-    left: 0;
-    background: transparent;
-    border-bottom-right-radius: 48px;
-    border-bottom-left-radius: 48px;
-    box-shadow: -48px 0 0 0 #fff;
+    min-height: 100svh;
+    background-color: white;
 }
 
 iframe {
