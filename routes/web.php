@@ -9,6 +9,12 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', function () {
     return view('frontend.home.index');
 })->name('landing');
+Route::get('/contact', function () {
+    return view('frontend.contact.index');
+})->name('contact');
+Route::get('/client', function () {
+    return view('frontend.client.index');
+})->name('client');
 
 
 //Backend Auth

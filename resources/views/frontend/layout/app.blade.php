@@ -30,17 +30,24 @@
         rel="stylesheet" />
 
     <!-- Our style -->
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style_fe.css') }}">
 
     @stack('css')
 
 </head>
 
-<body style="background-color: #0C0C0C">
+<body>
+    <!-- Loader -->
+    {{-- <div class="spinner-wrapper">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div> --}}
+
     <div class="wrapper">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
-            <div class="container-fluid px-4 py-2">
+            <div class="container-fluid px-1 py-2">
                 <a class="navbar-brand" href="{{ route('landing') }}">
                     <img src="{{ asset('assets/img/logo/main_light.png') }}" alt="logo_main" height="35">
                 </a>
@@ -50,12 +57,24 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                     <ul class="navbar-nav">
+                        @if (Route::is('landing'))
+                            <li class="nav-item">
+                                <button class="nav-link active" aria-current="page" onclick="backToTop()"
+                                    id="homee">Home</button>
+                            </li>
+                        @else
+                            <li class="nav-item">
+                                <a href="{{ route('landing') }}"
+                                    class="nav-link {{ request()->is('/') ? 'active' : '' }}">Home</a>
+                            </li>
+                        @endif
                         <li class="nav-item">
-                            <button class="nav-link active" aria-current="page" onclick="backToTop()"
-                                id="homee">Home</button>
+                            <a class="nav-link {{ request()->is('contact*') ? 'active' : '' }}"
+                                href="{{ route('contact') }}">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
+                            <a class="nav-link {{ request()->is('client*') ? 'active' : '' }}"
+                                href="{{ route('client') }}">Client</a>
                         </li>
                     </ul>
                 </div>
@@ -77,7 +96,7 @@
                     pada
                     menyediakan solusi
                     kreatif dan layanan pemasaran terpadu untuk berbagai klien dari berbagai industri.</p>
-                <img src="{{ asset('assets/Logo/logo-k-light-ok.png') }}" alt="Logo">
+                <img src="{{ asset('assets/img/logo/main_light.png') }}" alt="Logo">
                 <div class="mt-5">
                     <h5 class="mb-2">Follow Us</h5>
                     <ul class="list-unstyled d-flex">
@@ -96,41 +115,222 @@
         </div>
 
         <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper" style="background-color: #EDEDED">
+        <div class="content-wrapper">
             <main>
                 @yield('content')
             </main>
-
-            <!-- Back to top button -->
-            <button type="button" class="btn btn-dark btn-floating btn-lg" id="btn-back-to-top"
-                aria-label="Back to Top">
-                <i class="fas fa-angle-up fa-2xl text-center" style="color: #FFFFFF"></i>
-            </button>
-            <!-- Whatsapp button -->
-            <button type="button" class="btn btn-dark btn-floating btn-lg border-0" id="whatsapp"
-                aria-label="Whatsapp">
-                <a href="https://wa.me/62818212023" target="_blank"><i
-                        class="fa-brands fa-whatsapp fa-2xl text-center"
-                        style="color: #fff;margin-top: 10px;"></i></a>
-            </button>
-            <!-- Offcanvas button -->
-            <button class="btn btn-dark btn-floating btn-lg" type="button" id="offcanvas"
-                data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
-                aria-label="Offcanvas">
-                <i class="fas fa-angle-left fa-2xl" style="color: #FFFFFF"></i>
-            </button>
         </div>
 
         <!-- Main Footer -->
         <footer>
+            <div class="container" style="min-height: 70svh; color: #FFFFFF;padding-bottom: 40px">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 pt-5 mt-5 pb-2 mb-2">
+                    <div class="col-12 col-md-6 mb-3">
+                        <a href="/"
+                            class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+                            <img src="{{ asset('assets/img/logo/main_light.png') }}" alt="logo_main" height="32px">
+                        </a>
+                        <p class="text-secondary"><strong>Kantor Pusat</strong></p>
+                        <p></p>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2">
+                                <p><strong>Partner Workshop<br></strong>Jl. Terusan Jakarta No.43 Bandung, Indonesia,
+                                    40281</p>
+                            </li>
+                        </ul>
+                        <p class="text-secondary"><strong>Partner Care</strong></p>
+                        <div class="row mb-3">
+                            <div class="col-6 col-md-4">
+                                <ul class="nav flex-column">
+                                    <li class="nav-item mb-2"><a href="https://wa.me/6282126000126" target="_blank"
+                                            class="nav-link p-0 text-white"><i
+                                                class="fa-brands fa-whatsapp fa-xl"></i> 0821
+                                            2600 0126</a>
+                                    </li>
+                                    <li class="nav-item mb-2"><a href="https://wa.me/6282117108850" target="_blank"
+                                            class="nav-link p-0 text-white"><i
+                                                class="fa-brands fa-whatsapp fa-xl"></i> 0821
+                                            1710 8850</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <ul class="nav flex-column float-start">
+                                    <li class="nav-item mb-2"><a href="https://wa.me/6289626309580" target="_blank"
+                                            class="nav-link p-0 text-white"><i
+                                                class="fa-brands fa-whatsapp fa-xl"></i> 0896
+                                            2630 9580</a>
+                                    </li>
+                                    <li class="nav-item mb-2"><a href="https://wa.me/6289512776878" target="_blank"
+                                            class="nav-link p-0 text-white"><i
+                                                class="fa-brands fa-whatsapp fa-xl"></i> 0895
+                                            1277 6878</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="col-4 col-md-2 mb-3">
+                        <h5 style="color: #0055FF"><strong>Company</strong></h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">About</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Features</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Pricing</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">FAQs</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">About</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-4 col-md-2 mb-3">
+                        <h5 style="color: #0055FF"><strong>Business</strong></h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Home</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Features</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Pricing</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">FAQs</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">About</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-4 col-md-2 mb-3">
+                        <h5 style="color: #0055FF"><strong>Get in touch</strong></h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Contact</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Our
+                                    Location</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">FAQs</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row pb-3 pt-4">
+                    <div class="col-12 text-md-end text-center">
+                        <a href="#" target="_blank" class="text-white" style="margin-left: 12px"><i
+                                class="fa-brands fa-instagram fa-xl"></i></a>
+                        <a href="#" target="_blank" class="text-white" style="margin-left: 12px"><i
+                                class="fa-brands fa-facebook fa-xl"></i></a>
+                        <a href="#" target="_blank" class="text-white" style="margin-left: 12px"><i
+                                class="fa-brands fa-linkedin fa-xl"></i></a>
+                        <a href="#" target="_blank" class="text-white" style="margin-left: 12px"><i
+                                class="fa-brands fa-youtube fa-xl"></i></a>
+                    </div>
+                </div>
+                <div class="row py-3 text-white border-top mt-2">
+                    <small class="col-12 col-md-5 text-white text-md-start text-center">&copy; 2024 PT Partnership
+                        Procurement
+                        Solution. All
+                        rights
+                        reserved</small>
+
+                    <a href="{{ route('landing') }}"
+                        class="col-12 col-md-2 d-flex align-items-center justify-content-center mb-3 pt-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                        <img src="{{ asset('assets/img/logo/icon_p_white.png') }}" alt="icon_main" height="32px">
+                    </a>
+
+                    <div class="col-12 col-md-5 text-md-end text-center">
+                        <a href="#" class="text-white" style="text-decoration:none"><small>Syarat &
+                                Ketentuan</small></a>
+                        <a href="#" class="text-white"
+                            style="text-decoration:none; margin-left: 12px"><small>Kebijakan
+                                Privasi</small></a>
+                    </div>
+                </div>
+            </div>
         </footer>
+
+        <!-- Back to top button -->
+        <button type="button" class="btn btn-dark btn-floating btn-lg" id="btn-back-to-top"
+            aria-label="Back to Top">
+            <i class="fas fa-angle-up fa-2xl text-center" style="color: #FFFFFF"></i>
+        </button>
+        <!-- Whatsapp button -->
+        <button type="button" class="btn btn-dark btn-floating btn-lg border-0" id="whatsapp"
+            aria-label="Whatsapp">
+            <a href="https://wa.me/62818212023" target="_blank"><i class="fa-brands fa-whatsapp fa-2xl text-center"
+                    style="color: #fff;margin-top: 10px;"></i></a>
+        </button>
+        <!-- Offcanvas button -->
+        <button class="btn btn-dark btn-floating btn-lg" type="button" id="offcanvas" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" aria-label="Offcanvas">
+            <i class="fas fa-angle-left fa-2xl" style="color: #FFFFFF"></i>
+        </button>
     </div>
 
     <!-- REQUIRED SCRIPTS -->
 
     <!-- Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- Spinner -->
+    {{-- <script>
+        const spinnerWrapperEl = document.querySelector('spinner-wrapper');
+
+        window.addEventListener('load', () => {
+            spinnerWrapperEl.style.opacity = '0';
+
+            setTimeout(() => {
+                spinnerWrapperEl.style.display = 'none';
+            }, 200);
+        })
+    </script> --}}
+
+    <script>
+        // Navbar
+        const navEl = document.querySelector('.navbar');
+        var element = document.getElementById("homee");
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY >= 56) {
+                // element.classList.remove("active");
+                navEl.classList.add('navbar-scrolled', 'navbar-light');
+                navEl.classList.remove('navbar-dark');
+                $(".navbar-brand img").attr("src", "{{ asset('assets/img/logo/main_dark.png') }}");
+            } else if (window.scrollY < 56) {
+                // element.classList.add("active");
+                navEl.classList.remove('navbar-light', 'navbar-scrolled');
+                navEl.classList.add('navbar-dark');
+                $(".navbar-brand img").attr("src", "{{ asset('assets/img/logo/main_light.png') }}");
+            }
+        })
+
+        //Back to Top Button
+        let mybutton = document.getElementById("btn-back-to-top");
+
+        window.onscroll = function() {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (
+                document.body.scrollTop > 20 ||
+                document.documentElement.scrollTop > 20
+            ) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        // When the user clicks on the button, scroll to the top of the document
+        mybutton.addEventListener("click", backToTop);
+
+        function backToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
 
     @stack('scripts')
 </body>

@@ -1,7 +1,7 @@
 @extends('frontend.layout.app')
 
 @section('title')
-    Home
+    Client
 @endsection
 
 @push('css')
@@ -9,37 +9,13 @@
 
 @section('content')
     <!-- Heroes -->
-    <section class="heroes">
+    <section class="container_border">
         <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-6 text-center text-white">
-                    {{-- <h1 style="font-weight: 700">Perusahaan Mantab untuk kita semua.</h1> --}}
-                </div>
-                <div class="col-12 col-md-6">
-
-                </div>
-            </div>
         </div>
     </section>
-    <section class="s-line-hr-top" style="background-color: #FFFFFF; min-height: 110svh">
+    <section class="u-line-hr-top">
 
     </section>
-    <section style="min-height: 100svh"></section>
-    <!-- About Us -->
-
-    <!-- Our Services -->
-
-    <!-- Our Works-->
-
-    <!-- Client-->
-    {{-- <section style="background-color: #FFFFFF">
-
-    </section> --}}
-
-    <!-- Meet the Team-->
-
-    <!-- Galeri Project-->
-
     <!-- Maps-->
     <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d454.00994774846845!2d107.64986823566909!3d-6.9132130066250035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7e922e052cb%3A0x5b0e1194e44e5e65!2sJl.%20Terusan%20Jakarta%2C%20Babakan%20Surabaya%2C%20Kec.%20Kiaracondong%2C%20Kota%20Bandung%2C%20Jawa%20Barat%2040281!5e0!3m2!1sid!2sid!4v1719210338852!5m2!1sid!2sid"
