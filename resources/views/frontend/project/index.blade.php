@@ -1,7 +1,7 @@
 @extends('frontend.layout.app')
 
 @section('title')
-    Project
+    Our Project
 @endsection
 
 @push('css')

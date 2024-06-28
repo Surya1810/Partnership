@@ -1,6 +1,11 @@
 <?php
 
+use App\Http\Controllers\ClientController;
+use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\TextController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -43,4 +48,15 @@ Route::group(['prefix' => 'support', 'middleware' => ['auth']], function () {
     Route::put('/profile/update/{id}', [ProfileController::class, 'update'])->name('profile.update');
     Route::put('/profile/password/{id}', [ProfileController::class, 'password'])->name('profile.password');
     Route::delete('/profile/delete/{id}', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    // Text
+    Route::resource('text', TextController::class);
+    // Product
+    Route::resource('product', ProductController::class);
+    // Gallery
+    Route::resource('gallery', GalleryController::class);
+    // Project
+    Route::resource('project', ProjectController::class);
+    // Client
+    Route::resource('client', ClientController::class);
 });

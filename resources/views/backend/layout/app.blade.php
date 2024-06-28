@@ -14,6 +14,12 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap" rel="stylesheet" />
 
     <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('favicons/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicons/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicons/favicon-16x16.png') }}">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="{{ asset('assets/FontAwesome/6.2.1/css/all.min.css') }}">
@@ -55,7 +61,7 @@
             <a href="{{ route('dashboard') }}" class="brand-link logo-switch">
                 <img src="{{ asset('assets/img/logo/main_icon_blue.png') }}" alt="Partner_icon"
                     class="brand-image-xl logo-xs">
-                <img src="{{ asset('assets/img/logo/main_light.png') }}" alt="Partner_logo"
+                <img src="{{ asset('assets/img/logo/light/main.png') }}" alt="Partner_logo"
                     class="brand-image-xs logo-xl" style="left: 12px">
             </a>
 
@@ -87,15 +93,46 @@
                         </li>
                         <li class="nav-header mt-3">Support</li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                {{-- <i class="nav-icon fa-solid fa-house"></i> --}}
-                                <i class="nav-icon fa-solid fa-chart-simple"></i>
+                            <a href="{{ route('text.index') }}" class="nav-link">
+                                <i class="nav-icon fa-solid fa-align-left"></i>
+                                <p>
+                                    Text
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('project.index') }}" class="nav-link">
+                                <i class="nav-icon fa-regular fa-address-book"></i>
                                 <p>
                                     Project Preferences
                                 </p>
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a href="{{ route('gallery.index') }}" class="nav-link">
+                                <i class="nav-icon fa-regular fa-image"></i>
+                                <p>
+                                    Project Gallery
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('product.index') }}" class="nav-link">
+                                <i class="nav-icon fa-solid fa-box-open"></i>
+                                <p>
+                                    Product
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('client.index') }}" class="nav-link">
+                                <i class="nav-icon fa-solid fa-clipboard-list"></i>
+                                <p>
+                                    Client
+                                </p>
+                            </a>
+                        </li>
+                        {{-- <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fa-solid fa-boxes-packing"></i>
                                 <p>
@@ -123,7 +160,7 @@
                                     </a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> --}}
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
@@ -155,7 +192,7 @@
                 Anything you want
             </div>
             <!-- Default to the left -->
-            <strong>Copyright &copy; 2024 <a href="https://partnership.co.id">Partnership</a>.</strong> All rights
+            <strong>&copy; 2024 <a href="https://partnership.co.id">Partnership</a>.</strong> All rights
             reserved.
         </footer>
     </div>

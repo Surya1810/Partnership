@@ -22,7 +22,7 @@
         rel="stylesheet" />
 
     <!-- Our style -->
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style_fe.css') }}">
 </head>
 
 <body>
@@ -32,8 +32,7 @@
                 <div class="d-flex align-items-center justify-content-center" style="height: 100svh;">
                     <div class="col-lg-3">
                         <div class="d-flex justify-content-center mb-4">
-                            <img src="{{ asset('assets/img/logo/main_light.png') }}" alt="Partnership_logo"
-                                width="50%">
+                            <img src="{{ asset('assets/img/logo/light/main.png') }}" alt="logo_main" width="50%">
                         </div>
                         <div class="card login_card rounded-4">
                             <div class="card-body">

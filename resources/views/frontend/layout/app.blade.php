@@ -18,6 +18,14 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="{{ asset('assets/FontAwesome/6.2.1/css/all.min.css') }}">
 
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('favicons/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicons/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicons/favicon-16x16.png') }}">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
@@ -47,9 +55,9 @@
     <div class="wrapper">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
-            <div class="container-fluid px-1 py-2">
+            <div class="container-fluid px-lg-5 py-2">
                 <a class="navbar-brand" href="{{ route('landing') }}">
-                    <img src="{{ asset('assets/img/logo/main_light.png') }}" alt="logo_main" height="35">
+                    <img src="{{ asset('assets/img/logo/light/main.png') }}" alt="logo_main" height="24">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -80,10 +88,23 @@
                             <a class="nav-link {{ request()->is('product*') ? 'active' : '' }}"
                                 href="{{ route('product') }}">Product</a>
                         </li>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a class="nav-link {{ request()->is('project*') ? 'active' : '' }}"
                                 href="{{ route('project') }}">Project</a>
+                        </li> --}}
+                        <li class="nav-item">
+                            <button class="nav-link dropdown-toggle {{ request()->is('project*') ? 'active' : '' }}"
+                                type="button" data-bs-toggle="dropdown" aria-expanded="false">Project</button>
                         </li>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Separated link</a></li>
+                        </ul>
                         <li class="nav-item">
                             <a class="nav-link {{ request()->is('contact*') ? 'active' : '' }}"
                                 href="{{ route('contact') }}">Contact</a>
@@ -103,12 +124,12 @@
             <div class="offcanvas-body p-5">
                 <p class="text-secondary">Ready to work with us?</p>
                 <h3 class="mb-5"><a href="mailto:hi@madebykraf.com?subject=Mail from Website"
-                        class="link-putih">hi@madebykraf.com</a></h3>
+                        class="link-putih">hi@partnership.co.id</a></h3>
                 <p class="text-secondary">kraf. adalah perusahaaan agensi kreatif yang inovatif dan dinamis, berfokus
                     pada
                     menyediakan solusi
                     kreatif dan layanan pemasaran terpadu untuk berbagai klien dari berbagai industri.</p>
-                <img src="{{ asset('assets/img/logo/main_light.png') }}" alt="Logo" height="32px">
+                <img src="{{ asset('assets/img/logo/light/main.png') }}" alt="Logo" height="32px">
                 <div class="mt-5">
                     <h5 class="mb-2">Follow Us</h5>
                     <ul class="list-unstyled d-flex">
@@ -140,7 +161,7 @@
                     <div class="col-12 col-md-5 mb-3">
                         <a href="/"
                             class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
-                            <img src="{{ asset('assets/img/logo/main_light.png') }}" alt="logo_main" height="32px">
+                            <img src="{{ asset('assets/img/logo/light/main.png') }}" alt="logo_main" height="32px">
                         </a>
                         <p class="text-secondary"><strong>Kantor Pusat</strong></p>
                         <p></p>
@@ -160,8 +181,8 @@
                                 <ul class="nav flex-column">
                                     <li class="nav-item mb-2"><a href="https://wa.me/6282126000126" target="_blank"
                                             class="nav-link p-0 text-white"><i
-                                                class="fa-brands fa-whatsapp fa-xl"></i> 0821
-                                            2600 0126 ( Admin 1 )</a>
+                                                class="fa-brands fa-whatsapp fa-xl"></i> <strong>0821
+                                                2600 0126 ( Admin 1 )</strong></a>
                                     </li>
                                     <li class="nav-item mb-2 mt-2"><a href="https://wa.me/6282117108850"
                                             target="_blank" class="nav-link p-0 text-white"><i
@@ -254,7 +275,7 @@
                         reserved</small>
 
                     <a href="{{ route('landing') }}"
-                        class="col-12 col-md-2 d-flex align-items-center justify-content-center mb-3 pt-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                        class="col-12 col-md-2 d-flex align-items-center justify-content-center mb-3 pt-2 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
                         <img src="{{ asset('assets/img/logo/icon_p_white.png') }}" alt="icon_main" height="32px">
                     </a>
 
@@ -315,12 +336,12 @@
                 // element.classList.remove("active");
                 navEl.classList.add('navbar-scrolled', 'navbar-light');
                 navEl.classList.remove('navbar-dark');
-                $(".navbar-brand img").attr("src", "{{ asset('assets/img/logo/main_dark.png') }}");
+                $(".navbar-brand img").attr("src", "{{ asset('assets/img/logo/dark/main.png') }}");
             } else if (window.scrollY < 56) {
                 // element.classList.add("active");
                 navEl.classList.remove('navbar-light', 'navbar-scrolled');
                 navEl.classList.add('navbar-dark');
-                $(".navbar-brand img").attr("src", "{{ asset('assets/img/logo/main_light.png') }}");
+                $(".navbar-brand img").attr("src", "{{ asset('assets/img/logo/light/main.png') }}");
             }
         })
 
