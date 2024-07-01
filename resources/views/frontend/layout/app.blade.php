@@ -6,7 +6,7 @@
     <meta name="description"
         content="Kami percaya agensi kreatif juga inovatif perlu berorientasi pada perkembangan zaman dan terus mengikuti arus teknologi. Kraf. hadir dengan tujuan untuk menghadirkan kreativitas, keberanian, dan ketangguhan dalam setiap kebutuhan yang kamu perlukan.">
     <meta name="keywords" content="Event Organizer, Bandung, Kraf, Event">
-    <meta name="author" content="Kraf">
+    <meta name="author" content="Partnership">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
@@ -22,7 +22,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('favicons/apple-touch-icon.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicons/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicons/favicon-16x16.png') }}">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="manifest" href="{{ asset('favicons/site.webmanifest') }}">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
 
@@ -76,35 +76,42 @@
                                     class="nav-link {{ request()->is('/') ? 'active' : '' }}">Home</a>
                             </li>
                         @endif
-                        <li class="nav-item">
-                            <a class="nav-link {{ request()->is('about*') ? 'active' : '' }}"
-                                href="{{ route('about') }}">About</a>
+                        <li class="nav-item dropdown">
+                            <button class="nav-link dropdown-toggle {{ request()->is('about*') ? 'active' : '' }}"
+                                type="button" data-bs-toggle="dropdown" aria-expanded="false">Company</button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{{ route('about') }}">About</a>
+                                </li>
+                                <li><a class="dropdown-item" href="{{ route('product') }}">Products</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link {{ request()->is('client*') ? 'active' : '' }}"
                                 href="{{ route('client') }}">Client</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link {{ request()->is('product*') ? 'active' : '' }}"
-                                href="{{ route('product') }}">Product</a>
-                        </li>
-                        {{-- <li class="nav-item">
-                            <a class="nav-link {{ request()->is('project*') ? 'active' : '' }}"
-                                href="{{ route('project') }}">Project</a>
-                        </li> --}}
-                        <li class="nav-item">
+                        <li class="nav-item dropdown">
                             <button class="nav-link dropdown-toggle {{ request()->is('project*') ? 'active' : '' }}"
                                 type="button" data-bs-toggle="dropdown" aria-expanded="false">Project</button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{{ route('gallery') }}">Project Gallery</a>
+                                </li>
+                                <li><a class="dropdown-item" href="{{ route('project') }}">Project Reference</a>
+                                </li>
+                            </ul>
                         </li>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Separated link</a></li>
-                        </ul>
+                        <li class="nav-item dropdown">
+                            <button class="nav-link dropdown-toggle {{ request()->is('more*') ? 'active' : '' }}"
+                                type="button" data-bs-toggle="dropdown" aria-expanded="false">More</button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">K9 Visior</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#">Workshop</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#">High Risk</a>
+                                </li>
+                            </ul>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link {{ request()->is('contact*') ? 'active' : '' }}"
                                 href="{{ route('contact') }}">Contact</a>
@@ -291,19 +298,20 @@
         </footer>
 
         <!-- Back to top button -->
-        <button type="button" class="btn btn-dark btn-floating btn-lg" id="btn-back-to-top"
+        <button type="button" class="btn btn-dark btn-floating btn-lg shadow-lg " id="btn-back-to-top"
             aria-label="Back to Top">
             <i class="fas fa-angle-up fa-2xl text-center" style="color: #FFFFFF"></i>
         </button>
         <!-- Whatsapp button -->
-        <button type="button" class="btn btn-dark btn-floating btn-lg border-0" id="whatsapp"
+        <button type="button" class="btn btn-dark btn-floating btn-lg border-0 shadow-lg" id="whatsapp"
             aria-label="Whatsapp">
             <a href="https://wa.me/62818212023" target="_blank"><i class="fa-brands fa-whatsapp fa-2xl text-center"
                     style="color: #fff;margin-top: 10px;"></i></a>
         </button>
         <!-- Offcanvas button -->
-        <button class="btn btn-dark btn-floating btn-lg" type="button" id="offcanvas" data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" aria-label="Offcanvas">
+        <button class="btn btn-dark btn-floating btn-lg shadow-lg" type="button" id="offcanvas"
+            data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
+            aria-label="Offcanvas">
             <i class="fas fa-angle-left fa-2xl" style="color: #FFFFFF"></i>
         </button>
     </div>

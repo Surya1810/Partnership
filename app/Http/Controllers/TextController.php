@@ -13,9 +13,13 @@ class TextController extends Controller
      */
     public function index()
     {
-        $texts = Text::all();
+        $about = Text::where('category', 'about')->first();
+        $rekening = Text::where('category', 'rekening')->get();
+        $sosmed = Text::where('category', 'sosmed')->get();
+        $contact = Text::where('category', 'contact')->get();
+        $tagline = Text::where('category', 'tagline')->first();
 
-        return view('backend.text.index', compact('texts'));
+        return view('backend.text.index', compact('about', 'rekening', 'sosmed', 'contact', 'tagline'));
     }
 
     /**

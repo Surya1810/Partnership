@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('logo');
             $table->year('start_from');
-            $table->text('desc');
+            $table->text('desc')->nullable();
             $table->timestamps();
         });
     }

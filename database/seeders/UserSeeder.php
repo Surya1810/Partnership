@@ -20,7 +20,7 @@ class UserSeeder extends Seeder
             'name' => 'Firkie Apriliza Ramadhani, SE, MM',
             'username' => 'Firkie',
             'email' => 'firkie@partnership.co.id',
-            'password' => bcrypt('Partner#2024'),
+            'password' => bcrypt('123'),
             'level' => '1'
         ]);
         $admin = User::create([
@@ -30,7 +30,7 @@ class UserSeeder extends Seeder
             'name' => 'Encep Zainul Syah',
             'username' => 'Enza',
             'email' => 'enza@partnership.co.id',
-            'password' => bcrypt('Partner#2024'),
+            'password' => bcrypt('123'),
             'level' => '1'
         ]);
         $admin = User::create([
@@ -40,7 +40,7 @@ class UserSeeder extends Seeder
             'name' => 'Surya Dinarta Halim',
             'username' => 'Surya',
             'email' => 'surya@partnership.co.id',
-            'password' => bcrypt('Partner#2024'),
+            'password' => bcrypt('123'),
             'level' => '1'
         ]);
     }

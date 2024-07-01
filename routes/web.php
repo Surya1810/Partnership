@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
@@ -14,26 +15,23 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', function () {
     return view('frontend.home.index');
 })->name('landing');
+Route::get('/', [FrontendController::class, 'landing'])->name('landing');
 
-Route::get('/contact', function () {
-    return view('frontend.contact.index');
-})->name('contact');
 
-Route::get('/client', function () {
-    return view('frontend.client.index');
-})->name('client');
+//Project
+Route::get('/project/gallery', [FrontendController::class, 'project_gallery'])->name('gallery');
+Route::get('/project/references', [FrontendController::class, 'project_references'])->name('project');
 
-Route::get('/product', function () {
-    return view('frontend.product.index');
-})->name('product');
+//Company
+Route::get('/company/about', [FrontendController::class, 'about'])->name('about');
+Route::get('/company/product', [FrontendController::class, 'product'])->name('product');
 
-Route::get('/project', function () {
-    return view('frontend.project.index');
-})->name('project');
+//Contact
+Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
 
-Route::get('/about', function () {
-    return view('frontend.about.index');
-})->name('about');
+//Client
+Route::get('/client', [FrontendController::class, 'client'])->name('client');
+
 
 
 //Backend Auth

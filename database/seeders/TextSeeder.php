@@ -17,42 +17,53 @@ class TextSeeder extends Seeder
             'category' => 'tagline',
             'content' => 'One Vision, One Action',
         ]);
-
-        $text = Text::create([
-            'category' => 'profile',
-            'content' => '',
-        ]);
-        $text = Text::create([
-            'category' => 'contact',
-            'content' => '',
-        ]);
-        $text = Text::create([
-            'category' => 'contact',
-            'content' => '',
-        ]);
-        $text = Text::create([
-            'category' => 'contact',
-            'content' => '',
-        ]);
-        $text = Text::create([
-            'category' => 'contact',
-            'content' => '',
-        ]);
-        $text = Text::create([
-            'category' => 'rekening',
-            'content' => '',
-        ]);
-        $text = Text::create([
-            'category' => 'rekening',
-            'content' => '',
-        ]);
-        $text = Text::create([
-            'category' => 'rekening',
-            'content' => '',
-        ]);
-        $text = Text::create([
-            'category' => 'rekening',
-            'content' => '',
-        ]);
+        // $text = Text::create([
+        //     'category' => 'contact',
+        //     'content' => '',
+        // ]);
+        // $text = Text::create([
+        //     'category' => 'contact',
+        //     'content' => '',
+        // ]);
+        // $text = Text::create([
+        //     'category' => 'contact',
+        //     'content' => '',
+        // ]);
+        // $text = Text::create([
+        //     'category' => 'contact',
+        //     'content' => '',
+        // ]);
+        // $text = Text::create([
+        //     'category' => 'rekening',
+        //     'content' => '4377878328,BCA,PT. PARTNERSHIP PROCUREMENT SOLUTION',
+        // ]);
+        // $text = Text::create([
+        //     'category' => 'rekening',
+        //     'content' => '',
+        // ]);
+        // $text = Text::create([
+        //     'category' => 'rekening',
+        //     'content' => '',
+        // ]);
+        // $text = Text::create([
+        //     'category' => 'rekening',
+        //     'content' => '',
+        // ]);
+        // $text = Text::create([
+        //     'category' => 'sosmed',
+        //     'content' => '',
+        // ]);
+        // $text = Text::create([
+        //     'category' => 'sosmed',
+        //     'content' => '',
+        // ]);
+        // $text = Text::create([
+        //     'category' => 'sosmed',
+        //     'content' => '',
+        // ]);
+        // $text = Text::create([
+        //     'category' => 'sosmed',
+        //     'content' => '',
+        // ]);
     }
 }

@@ -33,9 +33,15 @@
                                 <div class="col-6">
                                     <h3 class="card-title">Project Gallery</h3>
                                 </div>
+                                <div class="col-6">
+                                    <a href="{{ route('gallery.create') }}"
+                                        class="float-right btn btn-sm btn-primary rounded-partner">
+                                        <i class="fas fa-plus"></i> Tambah
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                        <div class="card-body table-responsive">
+                        <div class="card-body">
 
                         </div>
                     </div>

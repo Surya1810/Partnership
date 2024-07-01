@@ -1,10 +1,12 @@
 @extends('frontend.layout.app')
 
 @section('title')
-    Our Project
+    Our Project References
 @endsection
 
 @push('css')
+    <!-- DataTables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
 @endpush
 
 @section('content')
@@ -13,23 +15,77 @@
         <div class="container h-100 p-5">
             <div class="row align-items-center h-100">
                 <div class="col-12 text-center text-white">
-                    <h1><strong>Our Projects</strong></h1>
+                    <h1><strong>Our Projects References</strong></h1>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Judul -->
-    <section class="s-line-hr-top" style="min-height: 100svh;background-color: #fff">
+    <section class="s-line-hr-top" style="min-height: 70svh;background-color: #fff">
         <div class="container">
-            <div class="row g-3 d-flex justify-content-center">
-                <div class="col-3 col-md-3">
-                    <img src="{{ asset('assets/img/project/BJB_1.jpg') }}" alt="Client" style="width: 100%;height: 100%">
-                </div>
+            <div class="col-12 pt-3">
+                <table>
+                    <table id="ProjectTable" class="table table-bordered table-striped text-sm">
+                        <thead class="table-dark">
+                            <tr>
+                                <th style="width: 5%">
+                                    No
+                                </th>
+                                <th>
+                                    Nama Pekerjaan
+                                </th>
+                                <th>
+                                    Instansi
+                                </th>
+                                <th>
+                                    Tahun
+                                </th>
+                                <th>
+                                    Keterangan
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-left">
+                            @foreach ($projects as $data)
+                                <tr>
+                                    <td>{{ $data->id }}</td>
+                                    <td>{{ $data->name }}</td>
+                                    <td>{{ $data->company }}</td>
+                                    <td>{{ $data->year }}</td>
+                                    <td>{{ $data->desc }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </table>
             </div>
         </div>
     </section>
 @endsection
 
 @push('scripts')
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
+
+    <script type="text/javascript">
+        $(function() {
+            $('#ProjectTable').DataTable({
+                "paging": true,
+                'processing': true,
+                "lengthChange": true,
+                "searching": true,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+                "responsive": true,
+                // "scrollX": true,
+                // width: "700px",
+                // columnDefs: [{
+                //     className: 'dtr-control',
+                //     orderable: false,
+                //     targets: -8
+                // }]
+            });
+        });
+    </script>
 @endpush

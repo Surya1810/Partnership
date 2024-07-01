@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Client;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Intervention\Image\ImageManager;
+use Intervention\Image\Drivers\Gd\Driver;
 
 class ClientController extends Controller
 {
@@ -34,18 +37,35 @@ class ClientController extends Controller
         $request->validate([
             'name' => 'bail|required',
             'logo' => 'bail|required',
-            'start_from' => 'bail|required',
+            'year' => 'bail|required',
         ]);
 
         $old = session()->getOldInput();
 
-        $client = new Client();
-        $client->name = $request->name;
-        $client->logo = $request->logo;
-        $client->start_from = $request->start_from;
-        $client->save();
+        $image = $request->file('logo');
 
-        return redirect()->route('client.index')->with(['pesan' => 'Client created successfully', 'level-alert' => 'alert-success']);
+        if (isset($image)) {
+            if (!Storage::disk('public')->exists('client')) {
+                Storage::disk('public')->makeDirectory('client');
+            }
+
+            $manager = new ImageManager(new Driver());
+            $imageName  = $request->name . '.' . $image->getClientOriginalExtension();
+            $img = $manager->read($image);
+            $img->toWebp(90)->save(base_path('public/storage/client/' . $imageName));
+            $save_url = 'client/' . $imageName;
+
+            $client = new Client();
+            $client->name = $request->name;
+            $client->logo = $save_url;
+            $client->start_from = $request->year;
+            $client->desc = $request->desc;
+            $client->save();
+
+            return redirect()->route('client.index')->with(['pesan' => 'Client created successfully', 'level-alert' => 'alert-success']);
+        } else {
+            return redirect()->route('client.index')->with(['pesan' => 'Client not created', 'level-alert' => 'alert-danger']);
+        }
     }
 
     /**
@@ -72,7 +92,7 @@ class ClientController extends Controller
         $request->validate([
             'name' => 'bail|required',
             'logo' => 'bail|required',
-            'start_from' => 'bail|required',
+            'year' => 'bail|required',
         ]);
 
         $client = Client::find($id);
@@ -90,8 +110,11 @@ class ClientController extends Controller
      */
     public function destroy($id)
     {
-        $project = Client::find($id);
-        $project->delete();
+        $client = Client::find($id);
+
+        Storage::disk('public')->delete($client->logo);
+
+        $client->delete();
 
         return redirect()->route('client.index')->with(['pesan' => 'Project deleted successfully', 'level-alert' => 'alert-danger']);
     }

@@ -83,7 +83,7 @@ body::-webkit-scrollbar {
     width: 75px;
     font-size: 23px;
     border-radius: 50%;
-    box-shadow: 2px 2px 3px #353535;
+    /* box-shadow: 2px 2px 3px #353535; */
     background-color: #0055ff;
     border: 0px;
 }
@@ -95,7 +95,7 @@ body::-webkit-scrollbar {
     height: 75px;
     width: 75px;
     border-radius: 50%;
-    box-shadow: 2px 2px 3px #353535;
+    /* box-shadow: 2px 2px 3px #353535; */
     background-color: #25d366;
     border: 0px;
 }
@@ -108,7 +108,7 @@ body::-webkit-scrollbar {
     width: 100px;
     padding-right: 50px;
     border-radius: 50%;
-    box-shadow: 2px 2px 3px #353535;
+    /* box-shadow: 2px 2px 3px #353535; */
     z-index: 10;
     background-color: #0055ff;
     border: 0px;
@@ -122,7 +122,7 @@ body::-webkit-scrollbar {
         width: 50px;
         font-size: 10px;
         border-radius: 50%;
-        box-shadow: 2px 2px 3px #353535;
+        /* box-shadow: 2px 2px 3px #353535; */
         background-color: #0055ff;
         border: 0px;
     }
@@ -134,7 +134,7 @@ body::-webkit-scrollbar {
         width: 50px;
         font-size: 11px;
         border-radius: 50%;
-        box-shadow: 2px 2px 3px #353535;
+        /* box-shadow: 2px 2px 3px #353535; */
         background-color: #25d366;
         border: 0px;
     }
@@ -146,7 +146,7 @@ body::-webkit-scrollbar {
         width: 80px;
         padding-right: 40px;
         border-radius: 50%;
-        box-shadow: 2px 2px 3px #353535;
+        /* box-shadow: 2px 2px 3px #353535; */
         z-index: 10;
         background-color: #0055ff;
         border: 0px;

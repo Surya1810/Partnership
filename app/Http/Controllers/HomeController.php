@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Client;
+use App\Models\Gallery;
+use App\Models\Product;
+use App\Models\Project;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +27,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('backend.dashboard.index');
+        $client = Client::all()->count();
+        $product = Product::all()->count();
+        $project = Project::all()->count();
+        $photos = Gallery::all()->count();
+
+        return view('backend.dashboard.index', compact('client', 'product', 'project', 'photos'));
     }
 }

@@ -12,7 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('galleries', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->integer('project_id');
+            $table->string('file_name');
+            $table->string('file_size');
+            $table->string('file_path');
             $table->timestamps();
         });
     }

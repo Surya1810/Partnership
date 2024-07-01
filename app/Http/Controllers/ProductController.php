@@ -4,7 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Intervention\Image\ImageManager;
+use Intervention\Image\Drivers\Gd\Driver;
 
 class ProductController extends Controller
 {
@@ -14,8 +18,9 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::all();
+        $users = User::all();
 
-        return view('backend.product.index', compact('products'));
+        return view('backend.product.index', compact('products', 'users'));
     }
 
     /**
@@ -35,16 +40,36 @@ class ProductController extends Controller
         $request->validate([
             'name' => 'bail|required',
             'logo' => 'bail|required',
+            'desc' => 'bail|required',
+            'pic_id' => 'bail|required',
         ]);
 
         $old = session()->getOldInput();
 
-        $product = new Product();
-        $product->name = $request->name;
-        $product->logo = $request->logo;
-        $product->save();
+        $image = $request->file('logo');
 
-        return redirect()->route('product.index')->with(['pesan' => 'Product created successfully', 'level-alert' => 'alert-success']);
+        if (isset($image)) {
+            if (!Storage::disk('public')->exists('logo')) {
+                Storage::disk('public')->makeDirectory('logo');
+            }
+
+            $manager = new ImageManager(new Driver());
+            $imageName  = $request->name . '.' . $image->getClientOriginalExtension();
+            $img = $manager->read($image);
+            $img->toWebp(90)->save(base_path('public/storage/logo/' . $imageName));
+            $save_url = 'logo/' . $imageName;
+
+            $product = new Product();
+            $product->name = $request->name;
+            $product->logo = $save_url;
+            $product->desc = $request->desc;
+            $product->pic_id = implode(",", $request->pic_id);;
+            $product->save();
+
+            return redirect()->route('product.index')->with(['pesan' => 'Product created successfully', 'level-alert' => 'alert-success']);
+        } else {
+            return redirect()->route('product.index')->with(['pesan' => 'Product not created', 'level-alert' => 'alert-danger']);
+        }
     }
 
     /**
@@ -87,6 +112,9 @@ class ProductController extends Controller
     public function destroy($id)
     {
         $product = Product::find($id);
+
+        Storage::disk('public')->delete($product->logo);
+
         $product->delete();
 
         return redirect()->route('product.index')->with(['pesan' => 'Product deleted successfully', 'level-alert' => 'alert-danger']);

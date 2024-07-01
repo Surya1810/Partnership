@@ -43,6 +43,7 @@ class ProjectController extends Controller
         $project->name = $request->name;
         $project->company = $request->company;
         $project->year = $request->year;
+        $project->desc = $request->desc;
         $project->save();
 
         return redirect()->route('project.index')->with(['pesan' => 'Project created successfully', 'level-alert' => 'alert-success']);
@@ -80,7 +81,8 @@ class ProjectController extends Controller
         $project->name = $request->name;
         $project->company = $request->company;
         $project->year = $request->year;
-        $project->save();
+        $project->desc = $request->desc;
+        $project->update();
 
         return redirect()->route('project.index')->with(['pesan' => 'Project updated successfully', 'level-alert' => 'alert-success']);
     }
