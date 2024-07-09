@@ -68,21 +68,21 @@
                         @if (Route::is('landing'))
                             <li class="nav-item">
                                 <button class="nav-link active" aria-current="page" onclick="backToTop()"
-                                    id="homee">Home</button>
+                                    id="homee">Beranda</button>
                             </li>
                         @else
                             <li class="nav-item">
                                 <a href="{{ route('landing') }}"
-                                    class="nav-link {{ request()->is('/') ? 'active' : '' }}">Home</a>
+                                    class="nav-link {{ request()->is('/') ? 'active' : '' }}">Beranda</a>
                             </li>
                         @endif
                         <li class="nav-item dropdown">
                             <button class="nav-link dropdown-toggle {{ request()->is('about*') ? 'active' : '' }}"
-                                type="button" data-bs-toggle="dropdown" aria-expanded="false">Company</button>
+                                type="button" data-bs-toggle="dropdown" aria-expanded="false">Info Perusahaan</button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{{ route('about') }}">About</a>
+                                <li><a class="dropdown-item" href="{{ route('about') }}">Tentang kami</a>
                                 </li>
-                                <li><a class="dropdown-item" href="{{ route('product') }}">Products</a>
+                                <li><a class="dropdown-item" href="{{ route('product') }}">Produk & Layanan</a>
                                 </li>
                             </ul>
                         </li>
@@ -102,11 +102,13 @@
                         </li>
                         <li class="nav-item dropdown">
                             <button class="nav-link dropdown-toggle {{ request()->is('more*') ? 'active' : '' }}"
-                                type="button" data-bs-toggle="dropdown" aria-expanded="false">More</button>
+                                type="button" data-bs-toggle="dropdown" aria-expanded="false">Lainnya</button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">K9 Visior</a>
-                                </li>
                                 <li><a class="dropdown-item" href="#">Workshop</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#">RFID</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#">K9 Vision</a>
                                 </li>
                                 <li><a class="dropdown-item" href="#">High Risk</a>
                                 </li>
@@ -114,7 +116,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link {{ request()->is('contact*') ? 'active' : '' }}"
-                                href="{{ route('contact') }}">Contact</a>
+                                href="{{ route('contact') }}">Hubungi kami</a>
                         </li>
                     </ul>
                 </div>
@@ -163,10 +165,10 @@
 
         <!-- Main Footer -->
         <footer>
-            <div class="container" style="min-height: 70svh; color: #FFFFFF;padding-bottom: 40px">
+            <div class="container h-100" style="height: 70svh; color: #FFFFFF;padding-bottom: 40px">
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 pt-5 mt-5 pb-2 mb-2">
                     <div class="col-12 col-md-5 mb-3">
-                        <a href="/"
+                        <a href="{{ route('landing') }}"
                             class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
                             <img src="{{ asset('assets/img/logo/light/main.png') }}" alt="logo_main" height="32px">
                         </a>
@@ -178,10 +180,10 @@
                                     Kec. Kiaracondong, Kota Bandung, Jawa Barat 40281</p>
                             </li>
                         </ul>
-                        <iframe
+                        {{-- <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d495.10196433844266!2d107.64939006629403!3d-6.912625189480249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7ecd3aeddb7%3A0xb1b80611740d391e!2sPartner%20Workshop!5e0!3m2!1sen!2sid!4v1719229867483!5m2!1sen!2sid"
                             width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade" title="maps"></iframe>
+                            referrerpolicy="no-referrer-when-downgrade" title="maps"></iframe> --}}
                         <p class="text-secondary"><strong>Partner Care</strong></p>
                         <div class="row mb-3">
                             <div class="col-6 col-md-6">
@@ -218,33 +220,33 @@
                     <div class="col-md-1"></div>
 
                     <div class="col-4 col-md-2 mb-3">
-                        <h5 style="color: #0055FF"><strong>Company</strong></h5>
+                        <h5 style="color: #0055FF"><strong>Info Perusahaan</strong></h5>
                         <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">About</a>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Tentang
+                                    kami</a>
                             </li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Features</a>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Produk &
+                                    Layanan</a>
                             </li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Pricing</a>
-                            </li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">FAQs</a>
-                            </li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">About</a>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Karir</a>
                             </li>
                         </ul>
                     </div>
 
                     <div class="col-4 col-md-2 mb-3">
-                        <h5 style="color: #0055FF"><strong>Business</strong></h5>
+                        <h5 style="color: #0055FF"><strong>Partner</strong></h5>
                         <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Home</a>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Project
+                                    Gallery</a>
                             </li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Features</a>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Project
+                                    References</a>
                             </li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Pricing</a>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Workshop</a>
                             </li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">FAQs</a>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">RFID</a>
                             </li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">About</a>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">K9 Vision</a>
                             </li>
                         </ul>
                     </div>
@@ -252,10 +254,8 @@
                     <div class="col-4 col-md-2 mb-3">
                         <h5 style="color: #0055FF"><strong>Get in touch</strong></h5>
                         <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Contact</a>
-                            </li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Our
-                                    Location</a>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Hubungi
+                                    kami</a>
                             </li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">FAQs</a>
                             </li>
@@ -309,7 +309,7 @@
                     style="color: #fff;margin-top: 10px;"></i></a>
         </button>
         <!-- Offcanvas button -->
-        <button class="btn btn-dark btn-floating btn-lg shadow-lg" type="button" id="offcanvas"
+        <button class="btn btn-dark btn-floating btn-lg shadow-lg d-none d-lg-block" type="button" id="offcanvas"
             data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
             aria-label="Offcanvas">
             <i class="fas fa-angle-left fa-2xl" style="color: #FFFFFF"></i>

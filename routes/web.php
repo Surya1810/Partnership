@@ -32,6 +32,15 @@ Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
 //Client
 Route::get('/client', [FrontendController::class, 'client'])->name('client');
 
+//K9 Vision
+Route::get('/K9-Vision', [FrontendController::class, 'k9_vision'])->name('k9_vision');
+//Workshop
+Route::get('/workshop', [FrontendController::class, 'workshop'])->name('workshop');
+//RFID
+Route::get('/rfid', [FrontendController::class, 'rfid'])->name('rfid');
+//high risk
+Route::get('/high-risk', [FrontendController::class, 'high_risk'])->name('high_risk');
+
 
 
 //Backend Auth

@@ -17,14 +17,20 @@ class FrontendController extends Controller
     public function landing()
     {
         $tagline = Text::where('category', 'tagline')->first();
+        $products = Product::all();
 
-        return view('frontend.home.index', compact('tagline'));
+        return view('frontend.home.index', compact('tagline', 'products'));
     }
 
     //Contact
     public function contact()
     {
-        return view('frontend.contact.index');
+        $rekening = Text::where('category', 'rekening')->get();
+        $contact = Text::where('category', 'contact')->get();
+        $sosmed = Text::where('category', 'sosmed')->get();
+        $email = Text::where('category', 'email')->get();
+
+        return view('frontend.contact.index', compact('rekening', 'contact', 'email', 'sosmed'));
     }
 
     //Client
@@ -61,5 +67,34 @@ class FrontendController extends Controller
         $galleries = Gallery::all();
 
         return view('frontend.gallery.index', compact('galleries'));
+    }
+
+    //Workshop
+    public function workshop()
+    {
+        $projects = Project::all();
+
+        return view('frontend.project.index', compact('projects'));
+    }
+    //K9 Vision
+    public function k9_vision()
+    {
+        $projects = Project::all();
+
+        return view('frontend.project.index', compact('projects'));
+    }
+    //RFID
+    public function rfid()
+    {
+        $projects = Project::all();
+
+        return view('frontend.project.index', compact('projects'));
+    }
+    //High Risk
+    public function high_risk()
+    {
+        $projects = Project::all();
+
+        return view('frontend.project.index', compact('projects'));
     }
 }
