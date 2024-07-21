@@ -4,11 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Gallery;
 use App\Http\Controllers\Controller;
+use App\Models\Image;
 use App\Models\Project;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-use Intervention\Image\ImageManager;
-use Intervention\Image\Drivers\Gd\Driver;
 
 class GalleryController extends Controller
 {
@@ -37,45 +36,29 @@ class GalleryController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'project_id' => 'bail|required',
-            'name' => 'bail|required',
+            'gallery_name' => 'bail|required',
+            'year' => 'bail|required',
         ]);
 
         $old = session()->getOldInput();
 
-        $image = $request->file('file');
+        $gallery = new Gallery();
+        $gallery->name = $request->input('gallery_name');
+        $gallery->tahun = $request->input('year');
+        $gallery->kode = uniqid(5);
+        $gallery->save();
 
-        if (isset($image)) {
-            if (!Storage::disk('public')->exists('gallery')) {
-                Storage::disk('public')->makeDirectory('gallery');
-            }
-
-            $manager = new ImageManager(new Driver());
-            $imageName  = uniqid() . '.' . $image->getClientOriginalExtension();
-            $img = $manager->read($image);
-            $img->toWebp(90)->save(base_path('public/storage/gallery/' . $imageName));
-            $save_url = 'gallery/' . $imageName;
-
-            $project = Project::find($request->input('project_id'));
-            $gallery = $project->image()->create([
-                'project_id' => $request->input('project_id'),
-                'file_name' => $imageName,
-                'file_size' => $img->size(),
-                'file_path' => $save_url,
-            ]);
-
-            return redirect()->route('client.index')->with(['pesan' => 'Client created successfully', 'level-alert' => 'alert-success']);
-        } else {
-            return redirect()->route('client.index')->with(['pesan' => 'Client not created', 'level-alert' => 'alert-danger']);
-        }
+        return redirect()->route('gallery.index')->with(['pesan' => 'Gallery created successfully', 'level-alert' => 'alert-success']);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Gallery $gallery)
+    public function show($id)
     {
-        //
+        $gallery = Gallery::find($id);
+
+        return view('backend.gallery.create', compact('gallery'));
     }
 
     /**
@@ -89,16 +72,34 @@ class GalleryController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Gallery $gallery)
+    public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'gallery_name' => 'bail|required',
+            'year' => 'bail|required',
+        ]);
+
+        $old = session()->getOldInput();
+
+        $gallery = Gallery::find($id);
+        $gallery->name = $request->input('gallery_name');
+        $gallery->tahun = $request->input('year');
+        $gallery->update();
+
+        return redirect()->route('gallery.index')->with(['pesan' => 'Gallery updated successfully', 'level-alert' => 'alert-success']);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Gallery $gallery)
+    public function destroy($id)
     {
-        //
+        $image = Image::where('gallery_id', $id);
+        $image->delete();
+        $gallery = Gallery::find($id);
+        Storage::deleteDirectory('public/gallery/' . $gallery->kode);
+        $gallery->delete();
+
+        return redirect()->route('gallery.index')->with(['pesan' => 'Gallery deleted successfully', 'level-alert' => 'alert-success']);
     }
 }

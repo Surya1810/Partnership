@@ -30,7 +30,7 @@
     <link rel="stylesheet"
         href="{{ asset('assets/adminLTE/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
     <!-- dropzonejs -->
-    <link rel="stylesheet" href="{{ asset('assets/adminLTE/plugins/dropzone/min/dropzone.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.0/min/dropzone.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('assets/AdminLTE/dist/css/adminlte.min.css') }}">
     <!-- Our style -->
@@ -194,7 +194,7 @@
     <!-- Select2 -->
     <script src="{{ asset('assets/adminLTE/plugins/select2/js/select2.full.min.js') }}"></script>
     <!-- dropzonejs -->
-    <script src="{{ asset('assets/adminLTE/plugins/dropzone/min/dropzone.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.0/min/dropzone.min.js"></script>
 
     @stack('scripts')
 
@@ -281,9 +281,6 @@
             @endforeach
         @endif
     </script>
-</body>
-
-</html>
 </body>
 
 </html>

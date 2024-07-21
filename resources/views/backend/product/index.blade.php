@@ -47,8 +47,8 @@
                                                         <i class="fa-solid fa-ellipsis-vertical"></i>
                                                     </button>
                                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                        <button class="dropdown-item" type="button" data-toggle="modal"
-                                                            data-target="#editProduct{{ $data->id }}">Edit</button>
+                                                        {{-- <button class="dropdown-item" type="button" data-toggle="modal"
+                                                            data-target="#editProduct{{ $data->id }}">Edit</button> --}}
                                                         <button class="dropdown-item"
                                                             onclick="deleteProduct({{ $data->id }})">Hapus</button>
                                                         <form id="delete-form-{{ $data->id }}"
@@ -162,7 +162,7 @@
     </div>
 
     <!-- Modal Edit Product-->
-    @foreach ($products as $data)
+    {{-- @foreach ($products as $data)
         <div class="modal fade" id="editProduct{{ $data->id }}" tabindex="-1" aria-labelledby="editProductLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
@@ -244,7 +244,7 @@
                 </div>
             </div>
         </div>
-    @endforeach
+    @endforeach --}}
 @endsection
 
 @push('scripts')

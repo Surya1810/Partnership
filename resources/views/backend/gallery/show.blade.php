@@ -1,7 +1,7 @@
 @extends('backend.layout.app')
 
 @section('title')
-    Upload
+    Show
 @endsection
 
 @push('css')
@@ -12,11 +12,11 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Upload</h1>
+                    <h1>Show</h1>
                     <ol class="breadcrumb text-black-50">
                         <li class="breadcrumb-item"><a class="text-black-50" href="{{ route('dashboard') }}">Home</a></li>
                         <li class="breadcrumb-item"><strong>Project Gallery</strong></li>
-                        <li class="breadcrumb-item active"><strong>Upload</strong></li>
+                        <li class="breadcrumb-item active"><strong>Show</strong></li>
                     </ol>
                 </div>
             </div>
@@ -32,18 +32,19 @@
                         <div class="card-header">
                             <div class="row align-items-center">
                                 <div class="col-6">
-                                    <h3 class="card-title">Upload</h3>
+                                    <h3 class="card-title">Show</h3>
                                 </div>
                             </div>
                         </div>
                         <div class="card-body">
-                            <div class="form-group">
-                                <h3>Gallery of <strong><i>{{ $gallery->name }}</i></strong></h3>
-                                <form action="{{ route('image.store') }}" method="POST" class="dropzone"
-                                    enctype="multipart/form-data" id="addImage">
-                                    @csrf
-                                    <input name="gallery_id" type="hidden" value="{{ $gallery->id }}">
-                                </form>
+                            <h3>Gallery of <strong><i>{{ $gallery->name }}</i></strong></h3>
+                            <div class="row">
+                                @foreach ($gallery->images as $data)
+                                    <div class="col-2">
+                                        <img src="{{ url('storage/' . $data->file_path) }}" alt="{{ $gallery->name }}"
+                                            class="w-100">
+                                    </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>

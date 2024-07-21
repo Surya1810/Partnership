@@ -22,11 +22,23 @@
     <!-- Judul -->
     <section class="s-line-hr-top" style="min-height: 100svh;background-color: #fff">
         <div class="container">
-            <div class="row g-3 d-flex justify-content-center">
-                <div class="col-3 col-md-3">
-                    <img src="{{ asset('assets/img/project/BJB_1.jpg') }}" alt="Client" style="width: 100%;height: 100%">
+            @foreach ($galleries as $gallery)
+                <div class="row g-3 pt-3 mb-5">
+                    <div class="col-sm-12 col-lg-3 pb-lg-0 pb-4 ">
+                        <h3 class="fs-4 text-navy fw-600 mb-3">
+                            {{ $gallery->name }}
+                        </h3>
+                    </div>
+                    <div class="offset-lg-1 col-sm-12 col-lg-7">
+                        @foreach ($gallery->images as $image)
+                            <div class="col-3 col-md-3">
+                                <img src="{{ url('storage/' . $image->file_path) }}" alt="{{ $gallery->name }}"
+                                    style="width: 100%;height: 100%">
+                            </div>
+                        @endforeach
+                    </div>
                 </div>
-            </div>
+            @endforeach
         </div>
     </section>
 @endsection

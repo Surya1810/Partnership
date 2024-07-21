@@ -78,7 +78,7 @@
                                             <td>{{ $data->name }}</td>
                                             <td>{{ $data->company }}</td>
                                             <td>{{ $data->year }}</td>
-                                            <td>{{ $data->desc }}</td>
+                                            <td>{!! html_entity_decode($data->desc) !!}</td>
                                             <td>
                                                 <button type="button" class="btn btn-sm btn-warning rounded-partner"
                                                     data-toggle="modal" data-target="#editProject{{ $data->id }}">

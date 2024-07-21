@@ -104,14 +104,15 @@
                             <button class="nav-link dropdown-toggle {{ request()->is('more*') ? 'active' : '' }}"
                                 type="button" data-bs-toggle="dropdown" aria-expanded="false">Lainnya</button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Workshop</a>
+                                <li><a class="dropdown-item" href="{{ route('product.detail', ['id' => 1]) }}">Our
+                                        Workshop</a></li>
+                                <li><a class="dropdown-item" href="{{ route('rfid') }}">SecureTags</a>
                                 </li>
-                                <li><a class="dropdown-item" href="#">RFID</a>
+                                <li><a class="dropdown-item" href="{{ route('k9_vision') }}">K9 Vision</a>
                                 </li>
-                                <li><a class="dropdown-item" href="#">K9 Vision</a>
-                                </li>
-                                <li><a class="dropdown-item" href="#">High Risk</a>
-                                </li>
+                                <li><a class="dropdown-item"
+                                        href="{{ route('product.detail', ['id' => 7]) }}">Building
+                                        Maintanance</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -132,12 +133,13 @@
             </div>
             <div class="offcanvas-body p-5">
                 <p class="text-secondary">Ready to work with us?</p>
-                <h3 class="mb-5"><a href="mailto:hi@madebykraf.com?subject=Mail from Website"
+                <h3 class="mb-5"><a href="mailto:hi@madebykraf.com?subject=Mail from Website" <p
+                        class="text-secondary">kraf. adalah perusahaaan agensi kreatif yang inovatif dan dinamis,
+                        berfokus
                         class="link-putih">hi@partnership.co.id</a></h3>
-                <p class="text-secondary">kraf. adalah perusahaaan agensi kreatif yang inovatif dan dinamis, berfokus
-                    pada
-                    menyediakan solusi
-                    kreatif dan layanan pemasaran terpadu untuk berbagai klien dari berbagai industri.</p>
+                pada
+                menyediakan solusi
+                kreatif dan layanan pemasaran terpadu untuk berbagai klien dari berbagai industri.</p>
                 <img src="{{ asset('assets/img/logo/light/main.png') }}" alt="Logo" height="32px">
                 <div class="mt-5">
                     <h5 class="mb-2">Follow Us</h5>
@@ -190,8 +192,8 @@
                                 <ul class="nav flex-column">
                                     <li class="nav-item mb-2"><a href="https://wa.me/6282126000126" target="_blank"
                                             class="nav-link p-0 text-white"><i
-                                                class="fa-brands fa-whatsapp fa-xl"></i> <strong>0821
-                                                2600 0126 ( Admin 1 )</strong></a>
+                                                class="fa-brands fa-whatsapp fa-xl"></i> 0821
+                                            2600 0126 ( Admin 1 )</a>
                                     </li>
                                     <li class="nav-item mb-2 mt-2"><a href="https://wa.me/6282117108850"
                                             target="_blank" class="nav-link p-0 text-white"><i
@@ -222,10 +224,12 @@
                     <div class="col-4 col-md-2 mb-3">
                         <h5 style="color: #0055FF"><strong>Info Perusahaan</strong></h5>
                         <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Tentang
+                            <li class="nav-item mb-2"><a href="{{ route('about') }}"
+                                    class="nav-link p-0 text-white">Tentang
                                     kami</a>
                             </li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Produk &
+                            <li class="nav-item mb-2"><a href="{{ route('product') }}"
+                                    class="nav-link p-0 text-white">Produk &
                                     Layanan</a>
                             </li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Karir</a>
@@ -234,27 +238,35 @@
                     </div>
 
                     <div class="col-4 col-md-2 mb-3">
-                        <h5 style="color: #0055FF"><strong>Partner</strong></h5>
+                        <h5 style="color: #0055FF"><strong>Partnership</strong></h5>
                         <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Project
+                            <li class="nav-item mb-2"><a href="{{ route('product.detail', ['id' => 1]) }}"
+                                    class="nav-link p-0 text-white">Our
+                                    Workshop</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="{{ route('rfid') }}"
+                                    class="nav-link p-0 text-white">SecureTags</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="{{ route('k9_vision') }}"
+                                    class="nav-link p-0 text-white">K9 Vision</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="{{ route('gallery') }}"
+                                    class="nav-link p-0 text-white">Project
                                     Gallery</a>
                             </li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Project
+                            <li class="nav-item mb-2"><a href="{{ route('project') }}"
+                                    class="nav-link p-0 text-white">Project
                                     References</a>
                             </li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Workshop</a>
-                            </li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">RFID</a>
-                            </li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">K9 Vision</a>
-                            </li>
+
                         </ul>
                     </div>
 
                     <div class="col-4 col-md-2 mb-3">
                         <h5 style="color: #0055FF"><strong>Get in touch</strong></h5>
                         <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Hubungi
+                            <li class="nav-item mb-2"><a href="{{ route('contact') }}"
+                                    class="nav-link p-0 text-white">Hubungi
                                     kami</a>
                             </li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">FAQs</a>

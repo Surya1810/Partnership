@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('company');
             $table->year('year')->nullable();
-            $table->text('desc')->default('Pekerjaan selesai dengan baik & lebih cepat dari waktu yang ditentukan.');
+            $table->text('desc');
             $table->timestamps();
         });
     }

@@ -27,11 +27,16 @@
                     <div class="col-3 col-md-4 d-flex align-items-stretch">
                         <div class="card shadow border-0 rounded-4">
                             <img src="{{ asset('storage/' . $data->logo) }}" class="card-img-top p-5"
-                                alt="{{ asset('storage/' . $data->name) }}">
+                                alt="{{ $data->name }}">
                             <div class="card-body text-center">
-                                <p class="card-text text-start">Some quick example text to build on the card title and make
+                                <p class="card-text text-start">Some quick example text to build on the card title and
+                                    make
                                     up the bulk
                                     of the card's content.</p>
+
+                                <a href="{{ route('product.detail', $data->id) }}"
+                                    class="btn btn-outline-secondary">Pelajari
+                                    Lebih</a>
                             </div>
                         </div>
                     </div>

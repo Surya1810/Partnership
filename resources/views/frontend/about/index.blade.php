@@ -21,45 +21,11 @@
 
     <!-- Judul -->
     <section class="s-line-hr-top" style="min-height: 100svh;background-color: #fff">
-        <section id="menubar">
-            <div class="container">
-                <div class="row py-4 d-md-block d-none">
-                    <ul class="nav nav-pills nav-justified">
-                        <li class="nav-item">
-                            <a class="nav-link text-start bg-white text-grey fw-light" aria-current="page"
-                                href="#">Konten</a>
-                        </li>
-                        <li class="nav-item bl-gold">
-                            <a class="nav-link text-start bg-white text-grey fw-600" href="#our-company">Perusahaan</a>
-                        </li>
-                        <li class="nav-item bl-gold">
-                            <a class="nav-link text-start bg-white text-grey fw-600" href="#journey">Perjalanan</a>
-                        </li>
-                        {{-- <li class="nav-item bl-gold">
-                            <a class="nav-link text-start bg-white text-grey fw-600" href="#management">Manajemen</a>
-                        </li> --}}
-                    </ul>
-                </div>
-                <div class="row py-4 px-2 d-md-none d-block" style="border-bottom : 1px solid #EFEFEF">
-                    <div class="col-12 abt">
-                        <h3 class="cat-title text-gold fw-600 mb-1">Content</h3>
-                        <div class="form-group col-md-12">
-                            <select class="form-select" name="page" aria-label="Default select example">
-                                <option selected="">Browse this page content</option>
-                                <option value="#our-company">Info Perusahaan</option>
-                                <option value="#journey">Perjalanan</option>
-                                {{-- <option value="#management">Manajemen</option> --}}
-                            </select>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <section id="our-company">
             <div class="container-lg my-lg-5 my-3">
                 <div class="row px-lg-5 px-3 py-3 py-sm-2">
                     <div class="col-sm-12 col-lg-3">
-                        <h2 class="fs-2 text-gold fw-600">
+                        <h2 class="fs-2 text-navy fw-600">
                             Info Perusahaan </h2>
                     </div>
                     <div class="col-sm-12 col-lg-8 fs-5 fw-light lh-base">
@@ -81,7 +47,7 @@
         <section id="aspiration" class="py-lg-5 py-4" style="background-color: #0B0B45">
             <div class="container text-white">
                 <div class="row px-lg-5 px-3 py-3 py-sm-2">
-                    <h2 class="fs-2 text-gold fw-600">
+                    <h2 class="fs-2 fw-600" style="color: #0055ff">
                         Aspirasi </h2>
                     <h3 class="fw-light fs-1 mb-5">
                         ”Meningkatkan kesempatan <strong class="fw-700">tumbuh</strong> berjuta insan melalui solusi
@@ -93,7 +59,7 @@
             <div class="container px-lg-5 px-4">
                 <div class="row ">
                     <div class="col-sm-12 col-lg-3 pb-lg-0 pb-4 ">
-                        <h3 class="fs-4 text-gold fw-600 mb-3">
+                        <h3 class="fs-4 text-navy fw-600 mb-3">
                             Perjalanan </h3>
                     </div>
                     <div class="offset-lg-1 col-sm-12 col-lg-7">
@@ -218,7 +184,7 @@
             <div class="container px-lg-5 px-4 py-lg-5 py-3">
                 <div class="row ">
                     <div class="col-sm-12 col-lg-4">
-                        <h3 class="fs-4 text-gold fw-600 mb-3">
+                        <h3 class="fs-4 text-navy fw-600 mb-3">
                             Manajemen </h3>
                         <div class="nav nav-pills me-lg-3 mb-sm-5" id="v-pills-tab" role="tablist"
                             aria-orientation="vertical">

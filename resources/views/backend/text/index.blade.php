@@ -43,9 +43,9 @@
                         </div>
                         <div class="card-body text-center">
                             @isset($about->content)
-                                <h1>
-                                    "{{ $about }}"
-                                </h1>
+                                <p>
+                                    "{{ $about->content }}"
+                                </p>
                             @else
                                 <small>Belum Ada</small>
                             @endisset
@@ -73,7 +73,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            {{-- <div class="row">
                 <div class="col-12 col-md-4 d-flex align-items-stretch">
                     <div class="card card-outline rounded-partner card-primary w-100">
                         <div class="card-header">
@@ -233,7 +233,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </section>
 @endsection

@@ -91,18 +91,41 @@ class ClientController extends Controller
     {
         $request->validate([
             'name' => 'bail|required',
-            'logo' => 'bail|required',
             'year' => 'bail|required',
         ]);
 
-        $client = Client::find($id);
+        $image = $request->file('logo');
 
-        $client->name = $request->name;
-        $client->logo = $request->logo;
-        $client->start_from = $request->start_from;
-        $client->save();
+        if (isset($image)) {
+            if (!Storage::disk('public')->exists('client')) {
+                Storage::disk('public')->makeDirectory('client');
+            }
 
-        return redirect()->route('client.index')->with(['pesan' => 'Client updated successfully', 'level-alert' => 'alert-success']);
+            $manager = new ImageManager(new Driver());
+            $imageName  = $request->name . '.' . $image->getClientOriginalExtension();
+            $img = $manager->read($image);
+            $img->toWebp(90)->save(base_path('public/storage/client/' . $imageName));
+            $save_url = 'client/' . $imageName;
+
+            $client = Client::find($id);
+
+            $client->name = $request->name;
+            $client->logo = $save_url;
+            $client->start_from = $request->year;
+            $client->desc = $request->desc;
+            $client->update();
+
+            return redirect()->route('client.index')->with(['pesan' => 'Client updated successfully', 'level-alert' => 'alert-success']);
+        } else {
+            $client = Client::find($id);
+
+            $client->name = $request->name;
+            $client->start_from = $request->year;
+            $client->desc = $request->desc;
+            $client->update();
+
+            return redirect()->route('client.index')->with(['pesan' => 'Client updated successfully', 'level-alert' => 'alert-success']);
+        }
     }
 
     /**

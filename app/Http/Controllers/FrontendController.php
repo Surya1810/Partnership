@@ -54,6 +54,12 @@ class FrontendController extends Controller
 
         return view('frontend.product.index', compact('products'));
     }
+    public function product_detail($id)
+    {
+        $products = Product::find($id);
+
+        return view('frontend.product.detail', compact('products'));
+    }
 
     //Project
     public function project_references()
@@ -69,32 +75,18 @@ class FrontendController extends Controller
         return view('frontend.gallery.index', compact('galleries'));
     }
 
-    //Workshop
-    public function workshop()
-    {
-        $projects = Project::all();
-
-        return view('frontend.project.index', compact('projects'));
-    }
     //K9 Vision
     public function k9_vision()
     {
         $projects = Project::all();
 
-        return view('frontend.project.index', compact('projects'));
+        return view('frontend.product.k9', compact('projects'));
     }
     //RFID
     public function rfid()
     {
         $projects = Project::all();
 
-        return view('frontend.project.index', compact('projects'));
-    }
-    //High Risk
-    public function high_risk()
-    {
-        $projects = Project::all();
-
-        return view('frontend.project.index', compact('projects'));
+        return view('frontend.product.securetags', compact('projects'));
     }
 }
