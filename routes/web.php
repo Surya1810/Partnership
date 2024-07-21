@@ -12,12 +12,6 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
 //Frontend
-Route::get('/symlink', function () {
-    $target = '/home/public_html/Partnership/storage/app/public';
-    $shortcut = '/home/public_html/partnership.co.id';
-    symlink($target, $shortcut);
-});
-
 Route::get('/', function () {
     return view('frontend.home.index');
 })->name('landing');

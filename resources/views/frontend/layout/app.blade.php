@@ -3,8 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="description"
-        content="Kami percaya agensi kreatif juga inovatif perlu berorientasi pada perkembangan zaman dan terus mengikuti arus teknologi. Kraf. hadir dengan tujuan untuk menghadirkan kreativitas, keberanian, dan ketangguhan dalam setiap kebutuhan yang kamu perlukan.">
+    <meta name="description" content="Partnership">
     <meta name="keywords" content="Event Organizer, Bandung, Kraf, Event">
     <meta name="author" content="Partnership">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -134,9 +133,7 @@
             <div class="offcanvas-body p-5">
                 <p class="text-secondary">Ready to work with us?</p>
                 <h3 class="mb-5"><a href="mailto:hi@madebykraf.com?subject=Mail from Website" <p
-                        class="text-secondary">kraf. adalah perusahaaan agensi kreatif yang inovatif dan dinamis,
-                        berfokus
-                        class="link-putih">hi@partnership.co.id</a></h3>
+                        class="text-secondary">Partnership dummy</a></h3>
                 pada
                 menyediakan solusi
                 kreatif dan layanan pemasaran terpadu untuk berbagai klien dari berbagai industri.</p>
