@@ -15,7 +15,7 @@ return new class extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('company');
-            $table->year('year')->nullable();
+            $table->string('year')->nullable();
             $table->text('desc');
             $table->timestamps();
         });

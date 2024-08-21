@@ -62,6 +62,7 @@ Route::group(['prefix' => 'support', 'middleware' => ['auth']], function () {
     Route::resource('image', ImageController::class);
     // Project
     Route::resource('project', ProjectController::class);
+    Route::post('/project/import', [ProjectController::class, 'import'])->name('project.import');
     // Client
     Route::resource('client', ClientController::class);
 });

@@ -41,6 +41,10 @@
                                 </div>
                                 <div class="col-6">
                                     <button type="button" class="float-right btn btn-sm btn-primary rounded-partner"
+                                        data-toggle="modal" data-target="#importProject">
+                                        <i class="fas fa-plus"></i> Import
+                                    </button>
+                                    <button type="button" class="float-right btn btn-sm btn-primary rounded-partner"
                                         data-toggle="modal" data-target="#addProject">
                                         <i class="fas fa-plus"></i> Tambah
                                     </button>
@@ -105,6 +109,42 @@
         </div>
     </section>
 
+    <!-- Modal Import Project-->
+    <div class="modal fade" id="importProject" tabindex="-1" aria-labelledby="ImportProjectLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="importProjectLabel">Import Project</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form action="{{ route('project.import') }}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    <div class="modal-body">
+                        <div class="custom-file">
+                            <input type="file" name="import_file"
+                                class="custom-file-input @error('import_file') is-invalid @enderror" id="import_file"
+                                required value="{{ old('import_file') }}"
+                                accept=".csv,
+                                application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,
+                                application/vnd.ms-excel">
+                            <label class="custom-file-label" for="import_file">Choose file</label>
+                        </div>
+                        @error('import_file')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary rounded-partner">Import</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <!-- Modal Add Project-->
     <div class="modal fade" id="addProject" tabindex="-1" aria-labelledby="addProjectLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -128,8 +168,9 @@
                                 </span>
                             @enderror
                             <label for="company" class="mb-0 form-label col-form-label-sm">Authority</label>
-                            <input type="text" class="form-control @error('company') is-invalid @enderror" id="company"
-                                name="company" placeholder="Enter authority name" value="{{ old('company') }}">
+                            <input type="text" class="form-control @error('company') is-invalid @enderror"
+                                id="company" name="company" placeholder="Enter authority name"
+                                value="{{ old('company') }}">
                             @error('company')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -137,8 +178,8 @@
                             @enderror
                             <label for="year" class="mb-0 form-label col-form-label-sm">Year</label>
                             <input type="number" class="form-control @error('year') is-invalid @enderror" id="year"
-                                name="year" placeholder="Enter project year" value="{{ old('year') }}" min="2010"
-                                max="2100">
+                                name="year" placeholder="Enter project year" value="{{ old('year') }}"
+                                min="2010" max="2100">
                             @error('year')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>

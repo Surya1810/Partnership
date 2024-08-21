@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Project;
 use App\Http\Controllers\Controller;
+use App\Imports\ProjectImport;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 
 class ProjectController extends Controller
 {
@@ -96,5 +98,19 @@ class ProjectController extends Controller
         $project->delete();
 
         return redirect()->route('project.index')->with(['pesan' => 'Project deleted successfully', 'level-alert' => 'alert-danger']);
+    }
+
+    public function import(Request $request)
+    {
+        $request->validate([
+            'import_file' => [
+                'required',
+                'file'
+            ],
+        ]);
+
+        Excel::import(new ProjectImport, $request->file('import_file'));
+
+        return redirect()->route('project.index')->with(['pesan' => 'Project imported successfully', 'level-alert' => 'alert-success']);
     }
 }

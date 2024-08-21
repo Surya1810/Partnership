@@ -10,6 +10,18 @@ class Project extends Model
 {
     use HasFactory;
 
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
+    protected $fillable = [
+        'name',
+        'company',
+        'year',
+        'desc',
+    ];
+
     public function image(): HasMany
     {
         return $this->hasMany(Gallery::class);
