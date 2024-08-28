@@ -15,7 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('pic_id')->nullable();
             $table->string('name');
+            $table->string('route');
             $table->longText('desc');
+            $table->string('tagline');
             $table->string('logo');
             $table->timestamps();
         });

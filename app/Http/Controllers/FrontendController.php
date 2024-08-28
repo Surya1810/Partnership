@@ -54,11 +54,54 @@ class FrontendController extends Controller
 
         return view('frontend.product.index', compact('products'));
     }
-    public function product_detail($id)
-    {
-        $products = Product::find($id);
+    // public function product_detail($id)
+    // {
+    //     $products = Product::find($id);
 
-        return view('frontend.product.detail', compact('products'));
+    //     return view('frontend.product.detail', compact('products'));
+    // }
+
+    public function workshop()
+    {
+        $products = Product::find('1');
+
+        return view('frontend.product.detail.workshop', compact('products'));
+    }
+    public function contractor()
+    {
+        $products = Product::find('2');
+
+        return view('frontend.product.detail.contractor', compact('products'));
+    }
+    public function law()
+    {
+        $products = Product::find('3');
+
+        return view('frontend.product.detail.law', compact('products'));
+    }
+    public function technology()
+    {
+        $products = Product::find('4');
+
+        return view('frontend.product.detail.technology', compact('products'));
+    }
+    public function informasi()
+    {
+        $products = Product::find('5');
+
+        return view('frontend.product.detail.informasi', compact('products'));
+    }
+    public function eo()
+    {
+        $products = Product::find('6');
+
+        return view('frontend.product.detail.eo', compact('products'));
+    }
+    public function building()
+    {
+        $products = Product::find('7');
+
+        return view('frontend.product.detail.building', compact('products'));
     }
 
     //Project

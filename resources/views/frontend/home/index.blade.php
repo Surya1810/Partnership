@@ -17,8 +17,9 @@
                     <p class="lead text-white">Tulis kisah sukses Anda bersama kami. Solusi terbaik akan kami ciptakan untuk
                         Anda!</p>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                        <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 rounded-4">Kenali Lebih
-                            Jauh <i class="fa-solid fa-arrow-right"></i></button>
+                        <a href="{{ route('product') }}" class="btn btn-primary btn-lg px-4 me-md-2 rounded-4">Kenali
+                            Lebih
+                            Jauh <i class="fa-solid fa-arrow-right"></i></a>
                         {{-- <button type="button" class="btn btn-outline-light btn-lg px-4">Default</button> --}}
                     </div>
                 </div>
@@ -114,7 +115,7 @@
     <!-- end keunggulan-->
 
     <!-- end CTA-->
-    <section id="aspiration" class="py-lg-5 py-4" style="background-color: #0B0B45">
+    {{-- <section id="aspiration" class="py-lg-5 py-4" style="background-color: #0B0B45">
         <div class="container text-white">
             <div class="row px-lg-5 px-3 py-3 py-sm-2">
                 <h2 class="fs-2 fw-600" style="color: #0055ff">
@@ -124,7 +125,7 @@
                     finansial digital yang <strong class="fw-700">berfokus pada kehidupan</strong>” </h3>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- end CTA-->
 
     <!-- start product & layanan -->
@@ -142,12 +143,14 @@
             <div class="row g-3 justify-content-center">
                 @foreach ($products as $data)
                     <div class="col-12 col-md-3">
-                        <div class="card shadow border-0 rounded-4">
-                            <div class="card-body">
-                                <img src="{{ asset('storage/' . $data->logo) }}" class="w-100 my-4 px-3"
-                                    alt="{{ $data->name }}">
+                        <a href="{{ route('product.' . $data->route) }}">
+                            <div class="card shadow border-0 rounded-4">
+                                <div class="card-body">
+                                    <img src="{{ asset('storage/logo/' . $data->logo) }}" class="w-100 my-4 px-3"
+                                        alt="{{ $data->name }}">
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 @endforeach
             </div>
@@ -164,49 +167,47 @@
                 <div class="row d-flex justify-content-center text-center">
                     <h1 class="text-white fw-600 mb-5">Apa yang baru dari Partnership</h1>
                     <div class="col-4 col-md-4">
-                        <div class="card rounded-4 border-0 h-100 w-100">
-                            <img src="{{ asset('assets/img/workshop/workshop.jpeg') }}" alt="workshop"
-                                class="card-img-top rounded-4">
-                            <div class="card-body rounded-4">
-                                <h4 class="text-navy mb-3">
-                                    <strong class="fw-700">Partnership</strong>
-                                    Workshop
-                                </h4>
-                                <p>dummy</p>
+                        <a href="{{ route('product.workshop') }}" class="text-decoration-none">
+                            <div class="card rounded-4 border-0 h-100 w-100">
+                                <img src="{{ asset('assets/img/workshop/workshop.jpeg') }}" alt="workshop"
+                                    class="card-img-top rounded-4">
+                                <div class="card-body rounded-4">
+                                    <h4 class="text-navy mb-3">
+                                        <strong class="fw-700">Partnership</strong>
+                                        Workshop
+                                    </h4>
+                                    <p>{!! Str::limit(strip_tags($products[0]->desc), 100) !!}</p>
+                                </div>
                             </div>
-                        </div>
-                        <a href="{{ route('product.detail', ['id' => 1]) }}"
-                            class="btn btn-outline-light rounded-4 mt-3">Pelajari Lebih <i
-                                class="fa-solid fa-arrow-right"></i></a>
+                        </a>
                     </div>
                     <div class="col-4 col-md-4">
-                        <div class="card rounded-4 border-0 h-100 w-100">
-                            <img src="{{ asset('assets/img/workshop/workshop.jpeg') }}" alt="workshop"
-                                class="card-img-top rounded-4">
-                            <div class="card-body rounded-4">
-                                <h4 class="text-navy mb-3">
-                                    <strong class="fw-700">Partner</strong> SecureTags
-                                </h4>
-                                <p>dummy</p>
+                        <a href="{{ route('rfid') }}" class="text-decoration-none">
+                            <div class="card rounded-4 border-0 h-100 w-100">
+                                <img src="{{ asset('assets/img/workshop/workshop.jpeg') }}" alt="workshop"
+                                    class="card-img-top rounded-4">
+                                <div class="card-body rounded-4">
+                                    <h4 class="text-navy mb-3">
+                                        <strong class="fw-700">Partner</strong> SecureTags
+                                    </h4>
+                                    <p>RFID Document Management System</p>
+                                </div>
                             </div>
-                        </div>
-                        <a href="{{ route('rfid') }}" class="btn btn-outline-light rounded-4 mt-3">Pelajari Lebih <i
-                                class="fa-solid fa-arrow-right"></i></a>
+                        </a>
                     </div>
                     <div class="col-4 col-md-4">
-                        <div class="card rounded-4 border-0 h-100 w-100">
-                            <img src="{{ asset('assets/img/workshop/climbing.jpeg') }}" alt="workshop"
-                                class="card-img-top rounded-4">
-                            <div class="card-body rounded-4">
-                                <h4 class="text-navy mb-3">
-                                    <strong class="fw-700">Partnership</strong> Building Maintanance & Cleaning
-                                </h4>
-                                <p>dummy</p>
+                        <a href="{{ route('product.building') }}" class="text-decoration-none">
+                            <div class="card rounded-4 border-0 h-100 w-100">
+                                <img src="{{ asset('assets/img/workshop/climbing.jpeg') }}" alt="workshop"
+                                    class="card-img-top rounded-4">
+                                <div class="card-body rounded-4">
+                                    <h4 class="text-navy mb-3">
+                                        <strong class="fw-700">Partnership</strong> Building Maintanance & Cleaning
+                                    </h4>
+                                    <p>{!! Str::limit(strip_tags($products[6]->desc), 100) !!}</p>
+                                </div>
                             </div>
-                        </div>
-                        <a href="{{ route('product.detail', ['id' => 7]) }}"
-                            class="btn btn-outline-light rounded-4 mt-3">Pelajari Lebih <i
-                                class="fa-solid fa-arrow-right"></i></a>
+                        </a>
                     </div>
                 </div>
             </div>

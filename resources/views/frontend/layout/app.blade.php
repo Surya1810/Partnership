@@ -44,13 +44,6 @@
 </head>
 
 <body>
-    <!-- Loader -->
-    {{-- <div class="spinner-wrapper">
-        <div class="spinner-border text-primary" role="status">
-            <span class="visually-hidden">Loading...</span>
-        </div>
-    </div> --}}
-
     <div class="wrapper">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
@@ -103,14 +96,13 @@
                             <button class="nav-link dropdown-toggle {{ request()->is('more*') ? 'active' : '' }}"
                                 type="button" data-bs-toggle="dropdown" aria-expanded="false">Lainnya</button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{{ route('product.detail', ['id' => 1]) }}">Our
+                                <li><a class="dropdown-item" href="{{ route('product.workshop') }}">Our
                                         Workshop</a></li>
                                 <li><a class="dropdown-item" href="{{ route('rfid') }}">SecureTags</a>
                                 </li>
                                 <li><a class="dropdown-item" href="{{ route('k9_vision') }}">K9 Vision</a>
                                 </li>
-                                <li><a class="dropdown-item"
-                                        href="{{ route('product.detail', ['id' => 7]) }}">Building
+                                <li><a class="dropdown-item" href="{{ route('product.building') }}">Building
                                         Maintanance</a></li>
                             </ul>
                         </li>
@@ -122,38 +114,6 @@
                 </div>
             </div>
         </nav>
-
-        <!-- offcanvas -->
-        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasRight"
-            aria-labelledby="offcanvasRightLabel">
-            <div class="offcanvas-header">
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                    aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body p-5">
-                <p class="text-secondary">Ready to work with us?</p>
-                <h3 class="mb-5"><a href="mailto:hi@madebykraf.com?subject=Mail from Website" <p
-                        class="text-secondary">Partnership dummy</a></h3>
-                pada
-                menyediakan solusi
-                kreatif dan layanan pemasaran terpadu untuk berbagai klien dari berbagai industri.</p>
-                <img src="{{ asset('assets/img/logo/light/main.png') }}" alt="Logo" height="32px">
-                <div class="mt-5">
-                    <h5 class="mb-2">Follow Us</h5>
-                    <ul class="list-unstyled d-flex">
-                        <li><a class="text-white" href="https://www.instagram.com/madebykraf" target="_blank"><i
-                                    class="fa-brands fa-instagram fa-lg"></i></a>
-                        </li>
-                        <li class="ms-3"><a class="text-white" href="https://www.facebook.com/madebykraf"
-                                target="_blank"><i class="fa-brands fa-facebook fa-lg"></i></a>
-                        </li>
-                        <li class="ms-3"><a class="text-white" href="https://www.linkedin.com/company/madebykraf/"
-                                target="_blank"><i class="fa-brands fa-linkedin fa-lg"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -190,12 +150,12 @@
                                     <li class="nav-item mb-2"><a href="https://wa.me/6282126000126" target="_blank"
                                             class="nav-link p-0 text-white"><i
                                                 class="fa-brands fa-whatsapp fa-xl"></i> 0821
-                                            2600 0126 ( Admin 1 )</a>
+                                            2600 0126</a>
                                     </li>
                                     <li class="nav-item mb-2 mt-2"><a href="https://wa.me/6282117108850"
                                             target="_blank" class="nav-link p-0 text-white"><i
                                                 class="fa-brands fa-whatsapp fa-xl"></i> 0821
-                                            1710 8850 ( Admin 2 )</a>
+                                            1710 8850</a>
                                     </li>
                                 </ul>
                             </div>
@@ -204,12 +164,12 @@
                                     <li class="nav-item mb-2"><a href="https://wa.me/6289626309580" target="_blank"
                                             class="nav-link p-0 text-white"><i
                                                 class="fa-brands fa-whatsapp fa-xl"></i> 0896
-                                            2630 9580 ( Admin 3 )</a>
+                                            2630 9580</a>
                                     </li>
                                     <li class="nav-item mb-2 mt-2"><a href="https://wa.me/6289512776878"
                                             target="_blank" class="nav-link p-0 text-white"><i
                                                 class="fa-brands fa-whatsapp fa-xl"></i> 0895
-                                            1277 6878 ( Admin 4 )</a>
+                                            1277 6878</a>
                                     </li>
                                 </ul>
                             </div>
@@ -237,7 +197,7 @@
                     <div class="col-4 col-md-2 mb-3">
                         <h5 style="color: #0055FF"><strong>Partnership</strong></h5>
                         <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="{{ route('product.detail', ['id' => 1]) }}"
+                            <li class="nav-item mb-2"><a href="{{ route('product.workshop') }}"
                                     class="nav-link p-0 text-white">Our
                                     Workshop</a>
                             </li>
@@ -317,31 +277,12 @@
             <a href="https://wa.me/62818212023" target="_blank"><i class="fa-brands fa-whatsapp fa-2xl text-center"
                     style="color: #fff;margin-top: 10px;"></i></a>
         </button>
-        <!-- Offcanvas button -->
-        <button class="btn btn-dark btn-floating btn-lg shadow-lg d-none d-lg-block" type="button" id="offcanvas"
-            data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
-            aria-label="Offcanvas">
-            <i class="fas fa-angle-left fa-2xl" style="color: #FFFFFF"></i>
-        </button>
     </div>
 
     <!-- REQUIRED SCRIPTS -->
 
     <!-- Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-
-    <!-- Spinner -->
-    {{-- <script>
-        const spinnerWrapperEl = document.querySelector('spinner-wrapper');
-
-        window.addEventListener('load', () => {
-            spinnerWrapperEl.style.opacity = '0';
-
-            setTimeout(() => {
-                spinnerWrapperEl.style.display = 'none';
-            }, 200);
-        })
-    </script> --}}
 
     <script>
         // Navbar

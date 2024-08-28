@@ -20,8 +20,8 @@
     </section>
 
     <!-- Judul -->
-    <section class="s-line-hr-top" style="min-height: 100svh;background-color: #fff">
-        <section id="our-company">
+    <section class="s-line-hr-top" style="min-height: 70svh;background-color: #fff">
+        {{-- <section id="our-company">
             <div class="container-lg my-lg-5 my-3">
                 <div class="row px-lg-5 px-3 py-3 py-sm-2">
                     <div class="col-sm-12 col-lg-3">
@@ -180,7 +180,7 @@
                 </div>
             </div>
         </section>
-        {{-- <section id="management" class="">
+        <section id="management" class="">
             <div class="container px-lg-5 px-4 py-lg-5 py-3">
                 <div class="row ">
                     <div class="col-sm-12 col-lg-4">
@@ -375,6 +375,29 @@
             <div class="modal fade" id="modal-management" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true"></div>
         </section> --}}
+        <div class="container text-center py-3">
+            <h2 class="fs-2 text-navy fw-600">PT. PARTNERSHIP PROCUREMENT SOLUTION</h2>
+            <div class="fs-5 fw-light lh-base mt-3">
+                <p>
+                    Didirikan pada tahun 2010 dengan kepemilikan saham 100 persen, PARTNERSHIP dimaksudkan untuk memberikan
+                    solusi baik produk atau pun jasa maupun proses bagi pertumbuhan bisnis pelanggan melalui penyediaan
+                    solusi
+                    bidang kontruksi, interior, advertising, reklame, eksterior, outsourching, security, procurement , event
+                    organizer dsb. <br><br>
+
+                    Kekuatan PARTNERSHIP didukung oleh kemampuan sumber daya manusia yang memiliki latar belakang dan
+                    pengetahuan yang kuat di bidang produk maupun jasa yang memiliki kemampuan pengalaman yang panjang dan
+                    terdidik dan bermitra dengan perusahan perusahan ternama lainya. Kekuatan ini memungkinkan PARTNERSHIP
+                    menjadi partner strategis dalam memberikan solusi kebutuhan bisnis pelanggan. <br><br>
+
+                    Kami hadir untuk membantu meningkatkan pendapatan dan kemampuan memberikan solusi di luar kemampuan
+                    pelanggan, meningkatkan efisiensi biaya, dan memaksimalkan pertumbuhan perusahaan melalui penerapan
+                    teknologi informasi dan sumber daya manusia yang terdidik secara efektif. <br><br>
+
+                    Nama Direktur Utama PT. Partnership Procurement Solution : Firkie Apriliza Ramadhani ,SE.,MM.,MH
+                </p>
+            </div>
+        </div>
     </section>
 @endsection
 

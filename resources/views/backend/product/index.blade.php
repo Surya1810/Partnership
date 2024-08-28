@@ -59,8 +59,8 @@
                                                         </form>
                                                     </div>
                                                 </div>
-                                                <img src="{{ asset('storage/' . $data->logo) }}" alt="{{ $data->name }}"
-                                                    class="w-100">
+                                                <img src="{{ asset('storage/logo/' . $data->logo) }}"
+                                                    alt="{{ $data->name }}" class="w-100">
                                             </div>
                                             <div class="card-footer text-center rounded-partner">
                                                 {{ $data->name }}
