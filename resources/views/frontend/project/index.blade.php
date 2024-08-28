@@ -25,39 +25,37 @@
     <section class="s-line-hr-top" style="min-height: 70svh;background-color: #fff">
         <div class="container">
             <div class="col-12 pt-3">
-                <table>
-                    <table id="ProjectTable" class="table table-bordered table-striped text-sm">
-                        <thead class="table-dark">
+                <table id="ProjectTable" class="table table-bordered table-striped text-sm w-100">
+                    <thead class="table-dark">
+                        <tr>
+                            <th style="width: 5%">
+                                No
+                            </th>
+                            <th>
+                                Nama Pekerjaan
+                            </th>
+                            <th>
+                                Instansi
+                            </th>
+                            <th>
+                                Tahun
+                            </th>
+                            <th>
+                                Keterangan
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-left">
+                        @foreach ($projects as $data)
                             <tr>
-                                <th style="width: 5%">
-                                    No
-                                </th>
-                                <th>
-                                    Nama Pekerjaan
-                                </th>
-                                <th>
-                                    Instansi
-                                </th>
-                                <th>
-                                    Tahun
-                                </th>
-                                <th>
-                                    Keterangan
-                                </th>
+                                <td>{{ $data->id }}</td>
+                                <td>{{ $data->name }}</td>
+                                <td>{{ $data->company }}</td>
+                                <td>{{ $data->year }}</td>
+                                <td>{{ $data->desc }}</td>
                             </tr>
-                        </thead>
-                        <tbody class="text-left">
-                            @foreach ($projects as $data)
-                                <tr>
-                                    <td>{{ $data->id }}</td>
-                                    <td>{{ $data->name }}</td>
-                                    <td>{{ $data->company }}</td>
-                                    <td>{{ $data->year }}</td>
-                                    <td>{{ $data->desc }}</td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+                        @endforeach
+                    </tbody>
                 </table>
             </div>
         </div>

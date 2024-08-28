@@ -161,7 +161,7 @@
     <!-- end product & layanan -->
 
     <!-- start workshop,rfid,high risk -->
-    <section class="workshop" style="height: 100svh">
+    <section class="workshop p-5">
         <div class="container h-100">
             <div class="row align-items-center h-100">
                 <div class="row d-flex justify-content-center text-center">
