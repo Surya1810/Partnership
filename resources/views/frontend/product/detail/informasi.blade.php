@@ -14,7 +14,7 @@
             <div class="row align-items-center h-100">
                 <div class="col-12 text-center text-white">
                     {{-- <h1><strong>{{ $products->name }}</strong></h1> --}}
-                    <img src="{{ asset('storage/logo/light/' . $products->logo) }}" alt="{{ $products->name }}" width="500">
+                    <img src="{{ asset('storage/logo/light/' . $products->logo) }}" alt="{{ $products->name }}" class="w-50">
                 </div>
             </div>
         </div>
@@ -28,7 +28,7 @@
             </div>
         </div>
         <!-- Marketing messaging and featurettes
-                                                                                                                                                                                                                                                                      ================================================== -->
+                                                                                                                                                                                                                                                                              ================================================== -->
         <!-- Wrap the rest of the page in another container to center all the content. -->
         <div id="myCarousel" class="carousel mt-3 slide" data-bs-ride="carousel">
             <div class="carousel-indicators">

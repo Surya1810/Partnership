@@ -24,7 +24,7 @@
         <div class="container">
             <div class="row g-4 d-flex justify-content-center py-3 w-100">
                 @foreach ($products as $data)
-                    <div class="col-3 col-md-3 d-flex align-items-stretch">
+                    <div class="col-12 col-md-3 d-flex align-items-stretch">
                         <div class="card shadow border-0 rounded-4">
                             <img src="{{ asset('storage/logo/' . $data->logo) }}" class="card-img-top p-5"
                                 alt="{{ $data->name }}">

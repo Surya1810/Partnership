@@ -24,11 +24,11 @@
         <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center">
             <div class="col-md-5 p-lg-5 mx-auto my-5">
                 {{-- <h1><strong>{{ $products->name }}</strong></h1> --}}
-                <img src="{{ asset('storage/logo/light/' . $products->logo) }}" alt="{{ $products->name }}" width="500">
+                <img src="{{ asset('storage/logo/light/' . $products->logo) }}" alt="{{ $products->name }}" class="w-50">
             </div>
         </div>
         <!-- Marketing messaging and featurettes
-                                                                                                                                                                                                                                                                  ================================================== -->
+                                                                                                                                                                                                                                                                      ================================================== -->
         <!-- Wrap the rest of the page in another container to center all the content. -->
         <div id="myCarousel" class="carousel mt-3 slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
