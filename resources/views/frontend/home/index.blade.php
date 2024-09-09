@@ -166,7 +166,7 @@
             <div class="row align-items-center h-100">
                 <div class="row d-flex justify-content-center text-center">
                     <h1 class="text-white fw-600 mb-5">Apa yang baru dari Partnership</h1>
-                    <div class="col-12 col-md-4">
+                    <div class="col-12 col-md-4 my-3">
                         <a href="{{ route('product.workshop') }}" class="text-decoration-none">
                             <div class="card rounded-4 border-0 h-100 w-100">
                                 <img src="{{ asset('assets/img/workshop/workshop.jpeg') }}" alt="workshop"
@@ -181,7 +181,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-12 col-md-4">
+                    <div class="col-12 col-md-4 my-3">
                         <a href="{{ route('rfid') }}" class="text-decoration-none">
                             <div class="card rounded-4 border-0 h-100 w-100">
                                 <img src="{{ asset('assets/img/workshop/workshop.jpeg') }}" alt="workshop"
@@ -195,7 +195,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-12 col-md-4">
+                    <div class="col-12 col-md-4 my-3">
                         <a href="{{ route('product.building') }}" class="text-decoration-none">
                             <div class="card rounded-4 border-0 h-100 w-100">
                                 <img src="{{ asset('assets/img/workshop/climbing.jpeg') }}" alt="workshop"

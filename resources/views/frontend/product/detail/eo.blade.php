@@ -23,14 +23,13 @@
     <section class="s-line-hr-top" style="min-height: 100svh;background-color: #fff">
         <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center">
             <div class="col-md-5 p-lg-5 mx-auto my-5">
-                {{-- <h1><strong>{{ $products->name }}</strong></h1> --}}
-                <img src="{{ asset('storage/logo/light/' . $products->logo) }}" alt="{{ $products->name }}" class="w-50">
+                <p class="lead fw-normal">{{ $products->desc }}</p>
             </div>
         </div>
         <!-- Marketing messaging and featurettes
-                                                                                                                                                                                                                                                                      ================================================== -->
+                                                                                                                                                                                                                                                                                  ================================================== -->
         <!-- Wrap the rest of the page in another container to center all the content. -->
-        <div id="myCarousel" class="carousel mt-3 slide" data-bs-ride="carousel">
+        {{-- <div id="myCarousel" class="carousel mt-3 slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
                     aria-label="Slide 1"></button>
@@ -86,7 +85,7 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
-        </div>
+        </div> --}}
 
         <div class="container py-3 marketing">
             <!-- START THE FEATURETTES -->
@@ -107,13 +106,9 @@
                     </ul>
                 </div>
                 <div class="col-md-5">
-                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-                        height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
-                        preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa"
-                            dy=".3em">500x500</text>
-                    </svg>
+                    <img src="{{ asset('assets/img/photo/eo/1.webp') }}" alt="Partnerhsip"
+                        class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                        height="500">
                 </div>
             </div>
 
@@ -134,14 +129,9 @@
                     </ul>
                 </div>
                 <div class="col-md-5 order-md-1">
-                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-                        width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img"
-                        aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa"
-                            dy=".3em">500x500</text>
-                    </svg>
-
+                    <img src="{{ asset('assets/img/photo/eo/2.webp') }}" alt="Partnerhsip"
+                        class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                        height="500">
                 </div>
             </div>
 
@@ -158,14 +148,9 @@
                     </p>
                 </div>
                 <div class="col-md-5">
-                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-                        width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img"
-                        aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa"
-                            dy=".3em">500x500</text>
-                    </svg>
-
+                    <img src="{{ asset('assets/img/photo/eo/3.webp') }}" alt="Partnerhsip"
+                        class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                        height="500">
                 </div>
             </div>
         </div>

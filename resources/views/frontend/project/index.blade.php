@@ -45,7 +45,7 @@
                             </th>
                         </tr>
                     </thead>
-                    <tbody class="text-left">
+                    <tbody class="text-left text-uppercase">
                         @foreach ($projects as $data)
                             <tr>
                                 <td>{{ $data->id }}</td>

@@ -23,7 +23,6 @@
     <section class="s-line-hr-top" style="min-height: 100svh;background-color: #fff">
         <div class="position-relative overflow-hidden p-3 text-center">
             <div class="col-md-5 mx-auto my-5">
-                <img src="{{ asset('assets/img/K9/img(2).jpg') }}" alt="logo">
                 <p class="lead fw-normal">Solusi inovatif untuk manajemen dokumen berbasis teknologi RFID,
                     dirancang untuk membantu organisasi mengelola, melacak, dan mengamankan dokumen dengan efisiensi
                     yang belum pernah ada sebelumnya.
@@ -31,7 +30,7 @@
             </div>
         </div>
 
-        <div id="myCarousel" class="carousel mt-3 slide" data-bs-ride="carousel">
+        {{-- <div id="myCarousel" class="carousel mt-3 slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
                     aria-label="Slide 1"></button>
@@ -87,7 +86,7 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
-        </div>
+        </div> --}}
 
         <div class="container py-3 marketing">
 
@@ -105,7 +104,7 @@
 
                 </div>
                 <div class="col-md-5">
-                    <img src="{{ asset('assets/img/K9/img(1).jpg') }}" alt="Ruff"
+                    <img src="{{ asset('assets/img/photo/tech/1.webp') }}" alt="Partnerhsip"
                         class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
                         height="500">
                 </div>
@@ -136,7 +135,7 @@
 
                 </div>
                 <div class="col-md-5 order-md-1">
-                    <img src="{{ asset('assets/img/K9/img(19).jpg') }}" alt="Ruff"
+                    <img src="{{ asset('assets/img/photo/tech/2.webp') }}" alt="Partnerhsip"
                         class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
                         height="500">
                 </div>
@@ -161,7 +160,7 @@
                     </ul>
                 </div>
                 <div class="col-md-5">
-                    <img src="{{ asset('assets/img/K9/img(21).jpg') }}" alt="Ruff"
+                    <img src="{{ asset('assets/img/photo/tech/3.webp') }}" alt="Partnerhsip"
                         class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
                         height="500">
                 </div>
