@@ -182,9 +182,9 @@
                         </a>
                     </div>
                     <div class="col-12 col-md-4 my-3">
-                        <a href="#" class="text-decoration-none">
+                        <a href="{{ route('product.securetag') }}" class="text-decoration-none">
                             <div class="card rounded-4 border-0 h-100 w-100">
-                                <img src="{{ asset('assets/img/workshop/workshop.jpeg') }}" alt="workshop"
+                                <img src="{{ asset('assets/img/photo/tech/1.jpg') }}" alt="workshop"
                                     class="card-img-top rounded-4">
                                 <div class="card-body rounded-4">
                                     <h4 class="text-navy mb-3">
@@ -196,7 +196,7 @@
                         </a>
                     </div>
                     <div class="col-12 col-md-4 my-3">
-                        <a href="#" class="text-decoration-none">
+                        <a href="{{ route('product.building') }}" class="text-decoration-none">
                             <div class="card rounded-4 border-0 h-100 w-100">
                                 <img src="{{ asset('assets/img/workshop/climbing.jpeg') }}" alt="workshop"
                                     class="card-img-top rounded-4">

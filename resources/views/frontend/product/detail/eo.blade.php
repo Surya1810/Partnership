@@ -156,7 +156,7 @@
 
             <hr class="featurette-divider">
             <h3>Produk & Jasa Kami</h3>
-            <div class="row d-flex justify-content-center text-center">
+            <div class="row g-2 d-flex justify-content-center text-center">
                 <div class="col-12 col-md-3">
                     <div class="card h-100">
                         <div class="card-body">

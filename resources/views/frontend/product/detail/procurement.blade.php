@@ -28,7 +28,7 @@
             </div>
         </div>
         <!-- Marketing messaging and featurettes
-                                                                                                                                                                                                                                                                                                                                                                                  ================================================== -->
+                                                                                                                                                                                                                                                                                                                                                                                      ================================================== -->
         <!-- Wrap the rest of the page in another container to center all the content. -->
         {{-- <div id="myCarousel" class="carousel mt-3 slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -157,7 +157,7 @@
 
             <hr class="featurette-divider">
             <h3>Produk & Jasa Kami</h3>
-            <div class="row d-flex justify-content-center text-center">
+            <div class="row g-2 d-flex justify-content-center text-center">
                 <div class="col-12 col-md-3">
                     <div class="card h-100">
                         <div class="card-body">
