@@ -15,7 +15,7 @@ class TextSeeder extends Seeder
     {
         $text = Text::create([
             'category' => 'tagline',
-            'content' => 'One Vision, One Action',
+            'content' => 'Your Solution Partner',
         ]);
         $text = Text::create([
             'category' => 'about',

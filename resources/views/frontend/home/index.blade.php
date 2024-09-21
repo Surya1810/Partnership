@@ -24,8 +24,8 @@
                     </div>
                 </div>
                 <div class="d-none d-md-block col-12 col-lg-6">
-                    <img src="{{ asset('assets/img/logo/icon_p_white.png') }}" class="d-block mx-lg-auto img-fluid"
-                        alt="icon_P" width="75%" loading="lazy">
+                    <img src="{{ asset('assets/img/logo/light/main.png') }}" class="d-block mx-lg-auto img-fluid"
+                        alt="icon_P" width="100%" loading="lazy">
                 </div>
             </div>
         </div>
@@ -182,7 +182,7 @@
                         </a>
                     </div>
                     <div class="col-12 col-md-4 my-3">
-                        <a href="{{ route('rfid') }}" class="text-decoration-none">
+                        <a href="#" class="text-decoration-none">
                             <div class="card rounded-4 border-0 h-100 w-100">
                                 <img src="{{ asset('assets/img/workshop/workshop.jpeg') }}" alt="workshop"
                                     class="card-img-top rounded-4">
@@ -196,7 +196,7 @@
                         </a>
                     </div>
                     <div class="col-12 col-md-4 my-3">
-                        <a href="{{ route('product.building') }}" class="text-decoration-none">
+                        <a href="#" class="text-decoration-none">
                             <div class="card rounded-4 border-0 h-100 w-100">
                                 <img src="{{ asset('assets/img/workshop/climbing.jpeg') }}" alt="workshop"
                                     class="card-img-top rounded-4">

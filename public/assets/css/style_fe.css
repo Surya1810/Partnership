@@ -175,7 +175,7 @@ body::-webkit-scrollbar {
     background-size: cover;
 }
 .join {
-    height: 50svh;
+    height: 70svh;
     width: 100svw;
     background-image: url(/assets/img/background/Pattern_Light.jpg);
     background-position: center center;

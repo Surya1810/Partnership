@@ -28,7 +28,7 @@
             </div>
         </div>
         <!-- Marketing messaging and featurettes
-                                                                                                                                                                                              ================================================== -->
+                                                                                                                                                                                                                                                          ================================================== -->
         <!-- Wrap the rest of the page in another container to center all the content. -->
         {{-- <div id="myCarousel" class="carousel mt-3 slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -147,9 +147,180 @@
                         kebutuhan Anda.</p>
                 </div>
                 <div class="col-md-5">
-                    <img src="{{ asset('assets/img/photo/contractor/3.webp') }}" alt="Partnerhsip"
+                    <img src="{{ asset('assets/img/photo/contractor/3.jpg') }}" alt="Partnerhsip"
                         class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
                         height="500">
+                </div>
+            </div>
+
+
+            <hr class="featurette-divider">
+            <h3>Produk Kami</h3>
+            <div class="row d-flex justify-content-center text-center">
+                <div class="col-12 col-md-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <strong>
+                                Perawatan & Permeliharaan Gedung
+                            </strong>
+                            <p>
+                                Jasa perawatan dan pemeliharaan gedung anda
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="{{ route('product.building') }}" class="btn btn-outline-dark">Pelajari</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <strong>
+                                Pengaspalan
+                            </strong>
+                            <p>
+                                Jasa pengaspalan yang berkualitas
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <strong>
+                                Elektrikal
+                            </strong>
+                            <p>
+                                Memperbaiki dan membuat jalur listrik
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <strong>
+                                Pembangunan
+                            </strong>
+                            <p>
+                                Desain, Perencanaan hingga eksekusi pembangunan
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+            <h3 class="text-center fw-600">Galeri</h3>
+
+            {{-- Perawatan Gedung --}}
+            <div class="row g-3 pt-3 mb-5">
+                <div class="col-sm-12 col-lg-3 pb-lg-0 pb-4 ">
+                    <h3 class="fs-4 text-navy fw-600 mb-3">
+                        Perawatan Gedung PSDMBP
+                    </h3>
+                </div>
+                <div class="offset-lg-1 col-sm-12 col-lg-7">
+                    <div class="row g-2">
+                        <div class="col-3">
+                            <img src="{{ asset('assets/img/photo/contractor/Perawatan Gedung/1.jpg') }}" alt="Gedung"
+                                style="width: 100%;height: 100%">
+                        </div>
+                        <div class="col-3">
+                            <img src="{{ asset('assets/img/photo/contractor/Perawatan Gedung/2.jpg') }}" alt="Gedung"
+                                style="width: 100%;height: 100%">
+                        </div>
+                        <div class="col-3">
+                            <img src="{{ asset('assets/img/photo/contractor/Perawatan Gedung/3.jpg') }}" alt="Gedung"
+                                style="width: 100%;height: 100%">
+                        </div>
+                        <div class="col-3">
+                            <img src="{{ asset('assets/img/photo/contractor/Perawatan Gedung/4.jpg') }}" alt="Gedung"
+                                style="width: 100%;height: 100%">
+                        </div>
+                        <div class="col-4">
+                            <img src="{{ asset('assets/img/photo/contractor/Perawatan Gedung/5.webp') }}" alt="Gedung"
+                                style="width: 100%;height: 100%">
+                        </div>
+                        <div class="col-4">
+                            <img src="{{ asset('assets/img/photo/contractor/Perawatan Gedung/6.webp') }}" alt="Gedung"
+                                style="width: 100%;height: 100%">
+                        </div>
+                        <div class="col-4">
+                            <img src="{{ asset('assets/img/photo/contractor/Perawatan Gedung/7.webp') }}" alt="Gedung"
+                                style="width: 100%;height: 100%">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- Elektrikal --}}
+            <div class="row g-3 pt-3 mb-5">
+                <div class="col-sm-12 col-lg-3 pb-lg-0 pb-4 ">
+                    <h3 class="fs-4 text-navy fw-600 mb-3">
+                        Elektrikal BJB Patrol
+                    </h3>
+                </div>
+                <div class="offset-lg-1 col-sm-12 col-lg-7">
+                    <div class="row g-2">
+                        <div class="col-4">
+                            <img src="{{ asset('assets/img/photo/contractor/Elektrikal/2.jpg') }}" alt="BJB"
+                                style="width: 100%;height: 100%">
+                        </div>
+                        <div class="col-4">
+                            <img src="{{ asset('assets/img/photo/contractor/Elektrikal/3.jpg') }}" alt="BJB"
+                                style="width: 100%;height: 100%">
+                        </div>
+                        <div class="col-4">
+                            <img src="{{ asset('assets/img/photo/contractor/Elektrikal/4.jpg') }}" alt="BJB"
+                                style="width: 100%;height: 100%">
+                        </div>
+                        <div class="col-4">
+                            <img src="{{ asset('assets/img/photo/contractor/Elektrikal/1.jpg') }}" alt="BJB"
+                                style="width: 100%;height: 100%">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- BJB --}}
+            <div class="row g-3 pt-3 mb-5">
+                <div class="col-sm-12 col-lg-3 pb-lg-0 pb-4 ">
+                    <h3 class="fs-4 text-navy fw-600 mb-3">
+                        Pembangunan Gudang Arsip BJB Patrol
+                    </h3>
+                </div>
+                <div class="offset-lg-1 col-sm-12 col-lg-7">
+                    <div class="row g-2">
+                        <div class="col-3">
+                            <img src="{{ asset('assets/img/photo/contractor/Arsip BJB/1.jpg') }}" alt="BJB"
+                                style="width: 100%;height: 100%">
+                        </div>
+                        <div class="col-3">
+                            <img src="{{ asset('assets/img/photo/contractor/Arsip BJB/2.jpg') }}" alt="BJB"
+                                style="width: 100%;height: 100%">
+                        </div>
+                        <div class="col-3">
+                            <img src="{{ asset('assets/img/photo/contractor/Arsip BJB/3.jpg') }}" alt="BJB"
+                                style="width: 100%;height: 100%">
+                        </div>
+                        <div class="col-3">
+                            <img src="{{ asset('assets/img/photo/contractor/Arsip BJB/4.jpg') }}" alt="BJB"
+                                style="width: 100%;height: 100%">
+                        </div>
+                        <div class="col-4">
+                            <img src="{{ asset('assets/img/photo/contractor/Arsip BJB/5.jpg') }}" alt="BJB"
+                                style="width: 100%;height: 100%">
+                        </div>
+                        <div class="col-4">
+                            <img src="{{ asset('assets/img/photo/contractor/Arsip BJB/6.jpg') }}" alt="BJB"
+                                style="width: 100%;height: 100%">
+                        </div>
+                        <div class="col-4">
+                            <img src="{{ asset('assets/img/photo/contractor/Arsip BJB/7.jpg') }}" alt="BJB"
+                                style="width: 100%;height: 100%">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

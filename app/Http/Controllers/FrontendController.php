@@ -54,54 +54,52 @@ class FrontendController extends Controller
 
         return view('frontend.product.index', compact('products'));
     }
-    // public function product_detail($id)
-    // {
-    //     $products = Product::find($id);
 
-    //     return view('frontend.product.detail', compact('products'));
-    // }
-
-    public function workshop()
+    public function procurement()
     {
         $products = Product::find('1');
 
+        return view('frontend.product.detail.procurement', compact('products'));
+    }
+    public function workshop()
+    {
+        $products = Product::find('2');
+
         return view('frontend.product.detail.workshop', compact('products'));
+    }
+    public function workshop_iklan()
+    {
+        return view('frontend.workshop.index');
     }
     public function contractor()
     {
-        $products = Product::find('2');
+        $products = Product::find('3');
 
         return view('frontend.product.detail.contractor', compact('products'));
     }
     public function law()
     {
-        $products = Product::find('3');
+        $products = Product::find('4');
 
         return view('frontend.product.detail.law', compact('products'));
     }
     public function technology()
     {
-        $products = Product::find('4');
+        $products = Product::find('5');
 
         return view('frontend.product.detail.technology', compact('products'));
     }
     public function informasi()
     {
-        $products = Product::find('5');
+        $products = Product::find('6');
 
         return view('frontend.product.detail.informasi', compact('products'));
     }
     public function eo()
     {
-        $products = Product::find('6');
-
-        return view('frontend.product.detail.eo', compact('products'));
-    }
-    public function building()
-    {
         $products = Product::find('7');
 
-        return view('frontend.product.detail.building', compact('products'));
+        return view('frontend.product.detail.eo', compact('products'));
     }
 
     //Project
@@ -126,10 +124,17 @@ class FrontendController extends Controller
         return view('frontend.product.k9', compact('projects'));
     }
     //RFID
-    public function rfid()
+    public function securetag()
     {
         $projects = Project::all();
 
         return view('frontend.product.securetags', compact('projects'));
+    }
+
+    public function building()
+    {
+        $products = Product::find('8');
+
+        return view('frontend.product.building', compact('products'));
     }
 }

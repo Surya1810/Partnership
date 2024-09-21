@@ -92,7 +92,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown">
+                        {{-- <li class="nav-item dropdown">
                             <button class="nav-link dropdown-toggle {{ request()->is('more*') ? 'active' : '' }}"
                                 type="button" data-bs-toggle="dropdown" aria-expanded="false">Lainnya</button>
                             <ul class="dropdown-menu">
@@ -105,7 +105,7 @@
                                 <li><a class="dropdown-item" href="{{ route('product.building') }}">Building
                                         Maintanance</a></li>
                             </ul>
-                        </li>
+                        </li> --}}
                         <li class="nav-item">
                             <a class="nav-link {{ request()->is('contact*') ? 'active' : '' }}"
                                 href="{{ route('contact') }}">Hubungi kami</a>
@@ -197,15 +197,9 @@
                     <div class="col-4 col-md-2 mb-3">
                         <h5 style="color: #0055FF"><strong>Partnership</strong></h5>
                         <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="{{ route('product.workshop') }}"
+                            <li class="nav-item mb-2"><a href="{{ route('iklan') }}"
                                     class="nav-link p-0 text-white">Our
                                     Workshop</a>
-                            </li>
-                            <li class="nav-item mb-2"><a href="{{ route('rfid') }}"
-                                    class="nav-link p-0 text-white">SecureTags</a>
-                            </li>
-                            <li class="nav-item mb-2"><a href="{{ route('k9_vision') }}"
-                                    class="nav-link p-0 text-white">K9 Vision</a>
                             </li>
                             <li class="nav-item mb-2"><a href="{{ route('gallery') }}"
                                     class="nav-link p-0 text-white">Project
@@ -274,8 +268,8 @@
         <!-- Whatsapp button -->
         <button type="button" class="btn btn-dark btn-floating btn-lg border-0 shadow-lg" id="whatsapp"
             aria-label="Whatsapp">
-            <a href="https://wa.me/62818212023" target="_blank"><i class="fa-brands fa-whatsapp fa-2xl text-center"
-                    style="color: #fff;margin-top: 10px;"></i></a>
+            <a href="https://wa.me/62082126000126" target="_blank"><i
+                    class="fa-brands fa-whatsapp fa-2xl text-center" style="color: #fff;margin-top: 10px;"></i></a>
         </button>
     </div>
 

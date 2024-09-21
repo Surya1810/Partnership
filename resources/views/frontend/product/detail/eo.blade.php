@@ -27,7 +27,7 @@
             </div>
         </div>
         <!-- Marketing messaging and featurettes
-                                                                                                                                                                                                                                                                                  ================================================== -->
+                                                                                                                                                                                                                                                                                          ================================================== -->
         <!-- Wrap the rest of the page in another container to center all the content. -->
         {{-- <div id="myCarousel" class="carousel mt-3 slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -151,6 +151,50 @@
                     <img src="{{ asset('assets/img/photo/eo/3.webp') }}" alt="Partnerhsip"
                         class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
                         height="500">
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+            <h3>Produk & Jasa Kami</h3>
+            <div class="row d-flex justify-content-center text-center">
+                <div class="col-12 col-md-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <strong>
+                                Wedding Organizer
+                            </strong>
+                            <p>
+                                Mengelola acara pernikahan dengan profesional
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <strong>
+                                Event Organizer
+                            </strong>
+                            <p>
+                                Mengelola acara dengan profesional dan efektif
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <strong>
+                                Katering
+                            </strong>
+                            <p>
+                                Katering untuk acara Anda dengan menu yang lezat
+
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

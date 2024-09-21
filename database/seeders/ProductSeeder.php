@@ -14,6 +14,14 @@ class ProductSeeder extends Seeder
     public function run(): void
     {
         $admin = Product::create([
+            'name' => 'Partnership Procurement Solution',
+            'route' => 'procurement',
+            'pic_id' => '1',
+            'logo' => 'main.png',
+            'tagline' => 'Solusi Pengadaan Tepat, Mendukung Bisnis Anda Tanpa Batas.',
+            'desc' => 'Partnership Procurement Solution menyediakan layanan pengadaan lengkap untuk bisnis, termasuk sparepart dan ATK, dengan efisiensi biaya dan layanan yang disesuaikan. Kami memastikan Anda mendapatkan produk berkualitas tepat waktu untuk mendukung kelancaran operasional bisnis.',
+        ]);
+        $admin = Product::create([
             'name' => 'Partnership Workshop',
             'route' => 'workshop',
             'pic_id' => '1',
@@ -79,17 +87,6 @@ class ProductSeeder extends Seeder
                     menawarkan layanan seperti wedding organizer, fotografi, videografi, gathering, ticketing, dan catering.
                     Dengan layanan terintegrasi dan tim profesional, kami memastikan setiap acara Anda sukses dan tak
                     terlupakan.',
-        ]);
-        $admin = Product::create([
-            'name' => 'Partnership Building Maintanance & Cleaning',
-            'route' => 'building',
-            'pic_id' => '1',
-            'logo' => 'cleaning.png',
-            'tagline' => 'Merawat Gedung Anda, Menjaga Kualitas dan Kebersihan.',
-            'desc' => 'Partnership Building Maintenance & Cleaning menawarkan layanan pembersihan dan
-                    pemeliharaan gedung yang menyeluruh, dari pembersihan rutin hingga perawatan preventif. Dengan tim
-                    profesional dan solusi yang disesuaikan, kami memastikan gedung Anda selalu bersih, terawat, dan dalam
-                    kondisi optimal.',
         ]);
     }
 }

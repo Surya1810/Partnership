@@ -25,26 +25,24 @@ Route::get('/project/references', [FrontendController::class, 'project_reference
 //Company
 Route::get('/company/about', [FrontendController::class, 'about'])->name('about');
 Route::get('/company/product', [FrontendController::class, 'product'])->name('product');
-// Route::get('/company/product/detail/{id}', [FrontendController::class, 'product_detail'])->name('product.detail');
+Route::get('/company/product/partnership-procurement-solution', [FrontendController::class, 'procurement'])->name('product.procurement');
 Route::get('/company/product/partnership-workshop', [FrontendController::class, 'workshop'])->name('product.workshop');
 Route::get('/company/product/partnership-contractor', [FrontendController::class, 'contractor'])->name('product.contractor');
 Route::get('/company/product/partnership-law-consultant', [FrontendController::class, 'law'])->name('product.law');
 Route::get('/company/product/partnership-technology', [FrontendController::class, 'technology'])->name('product.technology');
 Route::get('/company/product/partnership-information-system-&-website', [FrontendController::class, 'informasi'])->name('product.informasi');
 Route::get('/company/product/partnership-event-organizer-&-mice', [FrontendController::class, 'eo'])->name('product.eo');
-Route::get('/company/product/partnership-building-maintanance-&-cleaning', [FrontendController::class, 'building'])->name('product.building');
+Route::get('/company/product/partnership-workshop-advertising', [FrontendController::class, 'workshop_iklan'])->name('iklan');
+
+Route::get('/company/product/k9-vision', [FrontendController::class, 'k9-vision'])->name('product.k9-vision');
+Route::get('/company/product/partner-secure-tag-rfid', [FrontendController::class, 'securetag'])->name('product.securetag');
+Route::get('/company/product/partnership-building-maintanance', [FrontendController::class, 'building'])->name('product.building');
 
 //Contact
 Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
 
 //Client
 Route::get('/client', [FrontendController::class, 'client'])->name('client');
-
-//K9 Vision
-Route::get('/K9-Vision', [FrontendController::class, 'k9_vision'])->name('k9_vision');
-//RFID
-Route::get('/rfid', [FrontendController::class, 'rfid'])->name('rfid');
-
 
 
 //Backend Auth
